@@ -1,0 +1,8 @@
+---
+description: 'Extra marketing copy '
+---
+{% if product.marketing_copy %}
+    <section>
+        {{ product.marketing_copy |unescape}}
+    </section>
+{% endif %}

@@ -1,0 +1,18 @@
+---
+description: 'Displays a product video in a modal'
+---
+{% if product.youtube_video_url %}
+    <a href="#" data-toggle="modal" data-target="#video-modal" data-videoUrl="{{product.youtube_video_url}}">
+       <img src="{{product.video_thumb|theme_resource }}">
+    </a>
+    
+    <div id="video-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="productModal" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+	            <div class="modal-body">
+	                <iframe width="560" height="315" src="" frameborder="0" hspace="0" allowfullscreen scrolling="auto"></iframe>
+	            </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

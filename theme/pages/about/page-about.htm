@@ -1,0 +1,18 @@
+---
+template: inner
+protocol: all
+published: true
+name: About
+url: /about
+---
+<div id="banner" class="jumbotron row">
+	<h1>About</h1>
+</div>
+<section class="page-section row">
+	<div class="col-sm-3 col-md-offset-1">
+		<i class="fa fa-cubes" style="font-size: 100px;"></i>
+	</div>
+	<div class="col-sm-9 col-md-7">
+		{{ content_block('about-text') }}
+	</div>
+</section>

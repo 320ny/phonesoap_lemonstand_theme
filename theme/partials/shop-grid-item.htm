@@ -1,0 +1,51 @@
+{% set on_sale = product.onSale %}
+{% set variant = variant|default(null) %}
+
+
+{% if variant %}
+    {% set url = "/product/#{product.url_name}?" %}
+    {% for key, value in variant.getOptionsArray %}
+        {% set url = url ~ "options[#{key}]=#{value}&" %}
+    {% endfor %}
+
+    {% set image = variant.images.first %}
+{% else %}
+  {% set url = "/product/#{product.url_name}" %}
+  {% set image = product.images.first %}
+{% endif %}
+
+{{ open_form({'class': 'custom', 'onsubmit': 'return false'}) }}
+<div class="product-item text-center">
+	<a class="product-img" href="{{ url }}">
+        <img class="img-responsive" src="{{ image.thumbnail(400, 300) }}" alt="{{ product.name }}" />
+	</a>
+	<h3 class="product-title">
+		<a href="{{ url }}">{{ product.name }}</a>
+	</h3>
+	<div class="h4 product-price">
+		{% if on_sale %}
+		<span class="previous-price">{{ product.fullPrice|currency }}</span>
+		<div class="sale-tag">
+			Sale!
+		</div>
+		{% endif %}
+		<span>{{ product.price|currency }}</span>
+	</div>
+	<div class="buttons-holder">
+		<a class="btn btn-default btn-quick-view hidden-xs" rel="tooltip" title="Quick View" href="{{ url }}"><i class="fa fa-eye"></i></a>
+		{% if variant %}
+		    <input type="hidden" name="productId" value="{{ product.id }}"/>
+		    {% for key, value in variant.getOptionsArray %}
+		        <input type="hidden" name="options[{{key}}]" value="{{value}}">
+            {% endfor %}
+		    <a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart </a>
+		{% else %}
+		    {% if not product.options.count %}
+		        <input type="hidden" name="productId" value="{{ product.id }}"/>
+			    <a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
+		    {% endif %}
+		{% endif %}
+	</div>
+</div>
+
+{{ close_form() }}
