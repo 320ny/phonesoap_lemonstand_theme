@@ -8,7 +8,7 @@ engine: twig
 customFields:
     btnPrimaryColor: { type: color, title: 'Primary Button Background Color', default: '#02A4EF' }
     btnPrimaryHoverColor: { type: color, title: 'Primary Button Hover Background Color', default: '#02A4EF' }
-    faviconImage: { type: image, title: 'Favicon Image (Image you see on the chrome/tab)', default: '@/img/bg-dropdown-arrow.png' }
+    faviconImage: { type: image, title: 'Favicon Image (Image you see on the chrome/tab)', default: '@/img/favicon.ico' }
     logoImage: { type: image, title: 'Global: Logo Image', default: '@/img/phonesoap.png' }
     navbarBackgroundColor: { type: color, title: 'Global: Navbar Background Color', default: white }
     navbarLinkColor: { type: color, title: 'Global: Navbar Link Color', default: '#02A4EF' }

@@ -38,9 +38,10 @@
 			<div class="navbar-left">
 				{% set active_page = globals.active_page|default('home') %}
 				<ul id="main-nav" class="nav navbar-nav">
+					<li class="{{ active_page == 'problem' ? 'active' : null }}"><a href="#">THE PROBLEM</a></li>
 					<li class="{{ categories.count ? 'dropdown' : null }} {{ active_page == 'shop' ? 'active' : null }}">
 						<a class="dropdown-toggle" {{ categories.count ? 'data-toggle="dropdown"' : null }} id="shop-dropdown" href="{{ site_url('shop') }}">
-							Shop {{ categories.count ? '<b class="caret">' : null }}</b>
+							PRODUCTS <!--{{ categories.count ? '<b class="caret">' : null }}</b>-->
 						</a>
 						{% if categories.count %}
 						<ul class="dropdown-menu" role="menu" aria-labelledby="shop-dropdown">
@@ -57,12 +58,19 @@
 						</ul>
 						{% endif %}
 					</li>
+
+					<li class="{{ active_page == 'compatability' ? 'active' : null }}"><a href="#">COMPATABILITY</a></li>
+
+					<li class="{{ active_page == 'faq' ? 'active' : null }}"><a href="#">FAQ</a></li>
+
+					<li class="{{ active_page == 'blog' ? 'active' : null }}"><a href="#">BLOG</a></li>
+
+
+
 					{% if customer %}
 					<li class="{{ active_page == 'orders' ? 'active' : null }}"><a href="{{ site_url('orders') }}">My Orders</a></li>
 					<li class="{{ active_page == 'profile' ? 'active' : null }}"><a href="{{ site_url('profile') }}">My Profile</a></li>
 					{% endif %}
-					<li class="{{ active_page == 'about' ? 'active' : null }}"><a href="{{ site_url('about') }}">About</a></li>
-					<li class="{{ active_page == 'contact' ? 'active' : null }}"><a href="{{ site_url('contact') }}">Contact</a></li>
 					<li class="visible-xs col-xs-12">
 						{% if customer %}
 						{# Welcome, {{ customer.first_name }}! #}

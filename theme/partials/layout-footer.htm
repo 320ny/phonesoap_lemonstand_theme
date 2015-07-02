@@ -1,3 +1,13 @@
+<!-- FB Like code -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <footer id="page-footer">
 	<div class="container">
 		<img class="footer-accent" src="{{ 'img/footer-icon-new.png'|theme_resource }}" alt="">
@@ -5,12 +15,26 @@
 			<div class="footer-left-content">
 				<img class="" src="{{ 'img/join-revolution.png'|theme_resource }}" alt="">
 				<p>See the latest tweets, posts, pics, and videos</p>
+				<div class="social-icons">
+					<a target="_blank" href="https://www.facebook.com/PhoneSoap"><img class="" src="{{ 'img/icon-fb.jpg'|theme_resource }}" alt=""></a>
+					<a target="_blank" href="https://twitter.com/phonesoap"><img class="" src="{{ 'img/icon-twitter.jpg'|theme_resource }}" alt=""></a>
+					<a target="_blank" href="https://www.youtube.com/user/PhoneSoap"><img class="" src="{{ 'img/icon-youtube.jpg'|theme_resource }}" alt=""></a>
+					<a target="_blank" href="https://www.pinterest.com/phonesoap/"><img class="" src="{{ 'img/icon-pinterest.jpg'|theme_resource }}" alt=""></a>
+					<a target="_blank" href="https://plus.google.com/+Phonesoap/posts"><img class="" src="{{ 'img/icon-googleplus.jpg'|theme_resource }}" alt=""></a>
+					<a target="_blank" href="https://instagram.com/phonesoap/"><img class="" src="{{ 'img/icon-instagram.jpg'|theme_resource }}" alt=""></a>
+					<br>
+					<div class="fb-like" data-href="https://www.facebook.com/PhoneSoap" data-send="false" data-width="" data-show-faces="false"></div>
+				</div><!-- end social-icons -->
 			</div><!-- end footer-left-content -->
-		</div>
+		</div><!-- end footer-left -->
 
 		<div class="footer-right">
-			<img class="" src="{{ 'img/soapbox.png'|theme_resource }}" alt="">
-		</div>
+			<div class="footer-left-content">
+				<img class="" src="{{ 'img/soapbox.png'|theme_resource }}" alt="">
+				<p>Stay up to date on the latest news &amp; events</p>
+			</div><!-- end footer-left-content -->
+		</div><!-- end footer-right -->		
+
 		<!--
 		<div class="footer-contact text-center row">
 			<div class="col-xs-12 col-sm-4 col-lg-2 col-lg-offset-3">
@@ -35,4 +59,43 @@
 			</div>
 		</div>-->
 	</div><!-- end container -->
+
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="footer-bottom-item-wrapper">
+
+				<div class="footer-bottom-item copyright">
+ 					<strong>©2015</strong><br>
+			    <img class="" src="{{ 'img/footer-logo.png'|theme_resource }}" alt=""><br>
+			    <span>933 E 1910 S Suite 100<br>Provo, UT 84606 - (855) 212-8416<br><a href="/privacy-policy">Legal &amp; Privacy Policies</a></span>
+			  </div><!-- end footer-bottom-item -->
+
+				<div class="footer-bottom-item">
+					<a href="#">How to clean my cell phone?</a>
+			  </div><!-- end footer-bottom-item -->
+
+				<div class="footer-bottom-item">
+					<a href="#">How dirty is my cell phone?</a>
+			  </div><!-- end footer-bottom-item -->
+
+				<div class="footer-bottom-item">
+					<a href="#">How does UV light work?</a>
+			  </div><!-- end footer-bottom-item -->
+
+				<div class="footer-bottom-item">
+					<a href="#">Warranty &amp; Return Policy</a>
+			  </div><!-- end footer-bottom-item -->
+
+				<div class="footer-bottom-item">
+					<a href="#">Contact PHONESOAP</a>
+			  </div><!-- end footer-bottom-item -->
+
+				<div class="footer-bottom-item">
+					<a href="#">Wholesale Opportunities</a>
+			  </div><!-- end footer-bottom-item -->
+
+			</div><!-- footer-bottom-item-wrapper -->
+		</div><!-- end container -->
+	</div><!-- end footer-bottom -->
+
 </footer>

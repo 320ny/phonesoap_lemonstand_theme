@@ -11,26 +11,27 @@ url: /
 		<ol class="carousel-indicators">
 			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#home-carousel" data-slide-to="1"></li>
+			<li data-target="#home-carousel" data-slide-to="2"></li>
+			<li data-target="#home-carousel" data-slide-to="3"></li>
 		</ol>
 		
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="{{ 'img/boxie-slider-headphones.jpg'|theme_resource }}" alt="demo_slide_2" />
-				<div class="jumbotron carousel-caption">
-					<h1><i class="fa fa-cube"></i> Boxie!!!</h1>
-					<p>A Responsive LemonStand Theme.</p>
-					<p><a href="{{ site_url('about') }}" class="btn btn-primary btn-lg" role="button">Learn More &raquo;</a></p>
-				</div>
-			</div>
+				<img src="{{ 'img/banner-discover@2x.jpg'|theme_resource }}" alt="" />
+				<!--<div class="jumbotron carousel-caption"></div>-->
+			</div><!-- end item -->
 			<div class="item">
-				<img src="{{ 'img/boxie-slider-speakers.jpg'|theme_resource }}" alt="demo_slide_1" />
-				<div class="jumbotron carousel-caption left">
-					<h1>Speakers</h1>
-					<p>Cube speakers. Awesome.</p>
-					<p><a href="{{ site_url('shop') }}" class="btn btn-primary btn-lg" role="button">Shop Now &raquo;</a></p>
-				</div>
-			</div>
+				<img src="{{ 'img/banner-why@2x.jpg'|theme_resource }}" alt="" />
+				<!--<div class="jumbotron carousel-caption left"></div>-->
+			</div><!-- end item -->
+			<div class="item">
+				<img src="{{ 'img/banner-sanitizecharge@2x.jpg'|theme_resource }}" alt="" />
+			</div><!-- end item -->
+			<div class="item">
+				<img src="{{ 'img/banner-banishbacteria@2x.jpg'|theme_resource }}" alt="" />
+			</div><!-- end item -->
+
 		</div>
 		
 		<!-- Controls -->
@@ -43,6 +44,7 @@ url: /
 	</div>
 </div>
 
+<!--
 <section id="featured-products" class="page-section row">
 	<h2 class="section-title"><span>Featured Products</span></h2>
 		{% set featuredCollection = 'featured'|collection %}
@@ -86,3 +88,4 @@ url: /
 </div>
 
 {{ partial('shop-product-quick-view') }}
+-->
