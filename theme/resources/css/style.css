@@ -61,16 +61,67 @@ HOME
 --------------------
 */
 #home-banner {
-  width: 1000px;
-  margin: 30px auto 0;
   border-radius: 10px;
   background: #fff;
-} 
+  border: 1px solid #ccc;
+}
+#home-banner .carousel-control {
+  z-index: 100;
+}
 #home-banner .carousel-control .fa {
   text-shadow: 0 1px 2px #000;
 }
 .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   border-radius: 10px;
+}
+.news {
+  padding: 0 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.news span {
+  display: inline;
+  position: relative;
+  top: -10px;
+  padding: 10px 20px;
+  font-size: .8em;
+  color: #fff;
+  background: #02a4ef;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.news img {
+  display: inline-block;
+  width: 100%;
+}
+.home-link-callout {
+  height: 117px;
+  padding: 0 10px 0 0;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.home-link-callout-text {
+  float: left;
+  margin-left: 20px;
+}
+.home-link-callout strong {
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #636363;
+}
+.home-link-callout img {
+  float: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.home-link-callout a {
+  color: #02a4ef;
 }
 /* 
 --------------------
@@ -118,12 +169,55 @@ FOOTER
   margin: 0 auto;
 }
 .social-icons {
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: left;
 }
 .social-icons img {
   display: inline-block;
   margin: 0 10px 20px 0;
+}
+.mailchimp {
+  margin-top: 20px;
+  text-align: left;
+}
+.mailchimp input {
+  vertical-align: middle;
+}
+.mailchimp input#mce-EMAIL {
+  display: inline-block;
+  width: 250px;
+  padding: 10px 24px 8px;
+  margin-right: 5px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  line-height: 1;
+  color: #636363;
+  background: #fff;
+}
+.mailchimp input#mc-embedded-subscribe {
+  display: inline-block;
+  padding: 11px 24px 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  background: #0958a5;
+  border-radius: 20px;
+  border: none;
+}
+.mailchimp input::-webkit-input-placeholder {
+  font-size: 1.1em;
+}
+.mailchimp input:-moz-placeholder {
+  font-size: 1.1em;
+}
+.mailchimp input::-moz-placeholder {
+  font-size: 1.1em;
+}
+.mailchimp input:-ms-input-placeholder { 
+  font-size: 1.1em;
 }
 .footer-bottom {
   padding-top: 30px;
@@ -194,6 +288,48 @@ MEDIA QUERIES
   .navbar-nav > li > a {
     padding-top: 25px;
     padding-bottom: 15px;;
+  }
+  #home-banner .carousel-caption {
+    top: 40px;
+    left: 550px;
+    padding-right: 40px;
+    right: inherit;
+    text-align: left;
+    text-shadow: none;
+  }
+  #home-banner .carousel-caption h3 {
+    margin: 0;
+    font-size: 2em;
+    color: #777;
+  }
+  #home-banner .carousel-caption p {
+    margin: 40px 0 20px;
+    font-size: 1.3em;
+  }
+  #home-banner .carousel-caption a {
+    display: inline-block;
+    color: #02a4ef;
+    font-weight: 600;
+  }
+  #home-banner .carousel-caption strong {
+    display: block;
+    margin: 40px 0;
+    font-size: 2.5em;
+    line-height: 1;
+  }
+  #home-banner .carousel-caption span {
+    display: block;
+    font-size: 1.3em;
+    font-weight: 200;
+  }
+  #home-banner .carousel-caption .author {
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 1em;
+  }
+  #home-banner .addthis_toolbox {
+    margin-top: 20px;
   }
 }
 @media (min-width: 768px) {
