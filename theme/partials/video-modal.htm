@@ -1,0 +1,22 @@
+---
+description: 'Outputs a an image and a modal when clicked'
+---
+{% set modal_id = "video-modal-#{random()}" %}
+
+<a href="#" data-toggle="modal" data-target="#{{modal_id}}" data-videoUrl="{{video_url}}">
+   <img src="{{thumb_img}}">
+</a>
+
+<div id="{{modal_id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+    	       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+             <br>
+    	    </div>
+          <div class="modal-body">
+              <iframe width="560" height="315" src="" frameborder="0" hspace="0" allowfullscreen scrolling="auto"></iframe>
+          </div>
+        </div>
+    </div>
+</div>

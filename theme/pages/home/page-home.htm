@@ -17,7 +17,7 @@ url: /
 					<li data-target="#home-carousel" data-slide-to="2"></li>
 					<li data-target="#home-carousel" data-slide-to="3"></li>
 				</ol>
-				
+
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner">
 					<div class="item active">
@@ -28,7 +28,9 @@ url: /
 					<div class="item">
 						<img src="{{ 'img/banner-why@2x-alt.jpg'|theme_resource }}" alt="" />
 						<div class="carousel-cta"><a href="#">DIRTY PHONE?</a></div><!-- end carousel-cta -->
-						<div class="carousel-video"><img src="{{ 'img/video-thumb.jpg'|theme_resource }}" alt="" />
+						<div class="carousel-video">
+							{{ partial('video-modal', {'thumb_img': 'img/video-thumb.jpg'|theme_resource,
+																				 'video_url': 'https://www.youtube.com/embed/TSQSblwFjYs'}) }}
 						</div>
 					</div><!-- end item -->
 					<div class="item">
@@ -41,7 +43,7 @@ url: /
 					</div><!-- end item -->
 
 				</div>
-				
+
 				<!-- Controls -->
 				<a class="left carousel-control" href="#home-carousel" data-slide="prev">
 					<i class="fa fa-angle-left"></i>
@@ -67,15 +69,15 @@ url: /
 	<h2 class="section-title"><span>Featured Products</span></h2>
 		{% set featuredCollection = 'featured'|collection %}
 		{% if featuredCollection %}
-	
+
 			{% for product in featuredCollection.products %}
 				<div class="col-sm-4 product-holder">
-		            
+
 		            {{ partial('shop-grid-item', { 'product': product }) }}
-		                
+
 		        </div>
 			{% endfor %}
-			
+
 		{% else %}
 			<p>The product collection was not found. Please create this group on the Shop/Collections page.</p>
 		{% endif %}
@@ -205,15 +207,15 @@ url: /
 	<h2 class="section-title"><span>Featured Products</span></h2>
 		{% set featuredCollection = 'featured'|collection %}
 		{% if featuredCollection %}
-	
+
 			{% for product in featuredCollection.products %}
 				<div class="col-sm-4 product-holder">
-		            
+
 		            {{ partial('shop-grid-item', { 'product': product }) }}
-		                
+
 		        </div>
 			{% endfor %}
-			
+
 		{% else %}
 			<p>The product collection was not found. Please create this group on the Shop/Collections page.</p>
 		{% endif %}
@@ -224,15 +226,15 @@ url: /
 	<div id="product-carousel" class="col-xs-12">
 		{% set featuredCollection = 'new'|collection %}
 		{% if featuredCollection %}
-	
+
 			{% for product in featuredCollection.products %}
 				<div class="product-holder">
-		            
+
 		            {{ partial('shop-grid-item', { 'product': product }) }}
-		                
+
 		        </div>
 			{% endfor %}
-			
+
 		{% else %}
 			<p>The product collection was not found. Please create this group on the Shop/Collections page.</p>
 		{% endif %}
