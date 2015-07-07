@@ -41,7 +41,7 @@
 					<li class="{{ active_page == 'problem' ? 'active' : null }}"><a href="#">THE PROBLEM</a></li>
 					<li class="{{ categories.count ? 'dropdown' : null }} {{ active_page == 'shop' ? 'active' : null }}">
 						<a class="dropdown-toggle" {{ categories.count ? 'data-toggle="dropdown"' : null }} id="shop-dropdown" href="{{ site_url('shop') }}">
-							PRODUCTS <!--{{ categories.count ? '<b class="caret">' : null }}</b>-->
+							STORE <!--{{ categories.count ? '<b class="caret">' : null }}</b>-->
 						</a>
 						{% if categories.count %}
 						<ul class="dropdown-menu" role="menu" aria-labelledby="shop-dropdown">
