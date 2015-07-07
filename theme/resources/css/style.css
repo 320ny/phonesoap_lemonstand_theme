@@ -15,6 +15,9 @@ strong {
 #page-content {
   background: #F6F6F6;
 }
+#cart, #receipt, #order, #new-products, #featured-products, #shop {
+  background: #F6F6F6;
+}
 /* 
 --------------------
 
@@ -171,6 +174,22 @@ HOME
   border-radius: 5px;
   font-weight: 600;
 }
+.product-holder .product-item {
+  padding-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.product-holder {
+  margin-bottom: 0;
+}
+#featured-products h2 {
+  margin-top: 40px;
+  color: #cfcfcf;
+  background: #F6F6F6;
+}
+#featured-products span {
+  background: #F6F6F6;
+}
 /* 
 --------------------
 
@@ -179,7 +198,6 @@ FOOTER
 --------------------
 */ 
 #page-footer {
-  margin-top: 100px;
   padding: 10px 0 50px;
   background: #02a4ef;
   font-family: arial, sans-serif;
@@ -351,7 +369,7 @@ MEDIA QUERIES
     color: #777;
   }
   #home-banner .carousel-caption p {
-    margin: 20px 0;
+    margin: 13% 0 5%;
     font-size: 1.3em;
   }
   #home-banner .carousel-caption a {
@@ -361,8 +379,8 @@ MEDIA QUERIES
   }
   #home-banner .carousel-caption strong {
     display: block;
-    margin: 0 0 40px;
-    font-size: 2.5em;
+    margin: 13% 0 7%;
+    font-size: 2.3em;
     line-height: 1;
   }
   #home-banner .carousel-caption span {
@@ -380,12 +398,17 @@ MEDIA QUERIES
     margin-top: 20px;
   }
   #home-carousel-2 .carousel-caption {
-    right: 0;
-    width: 50%;
+    display: inline-block;
+    position: static !important;
+    width: 48%;
+    padding: 0 3% 0 0;
     text-align: left;
+    vertical-align: top;
   }
-  #home-carousel-2 .carousel-caption img {
-    width: 50%;
+  #home-carousel-2 .carousel-inner img {
+    display: inline-block;
+    width: 42%;
+    margin-right: 5%;
     text-align: left;
   }
   .home-link-callout-text {
