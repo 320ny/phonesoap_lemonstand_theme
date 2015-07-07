@@ -46,8 +46,9 @@ HEADER
 .navbar-header .navbar-brand {
   padding: 12px 0 0;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav#main-nav li a {
   font-weight: 600;
+  color: #ff6000;
 }
 .navbar-default .navbar-utils > ul > li > .btn:not(.cart-btn) {
   padding: 26px 15px 15px;
@@ -71,11 +72,44 @@ HOME
 #home-banner .carousel-control .fa {
   text-shadow: 0 1px 2px #000;
 }
+.carousel-indicators li {
+  border-color: #02a4ef;
+}
+.carousel-indicators .active {
+  background-color: #02a4ef;
+}
+.carousel-video {
+  position: absolute;
+  left: 98px;
+  bottom: 50px;
+}
+.carousel-video img {
+  width: 229px;
+}
+.carousel-cta {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+}
+.carousel-cta a {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 14px 14px 0 0;
+  text-transform: uppercase;
+  background: #02a4ef;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+.carousel-cta a:hover {
+  opacity: .8;
+}
 .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   border-radius: 10px;
 }
 .news {
-  padding: 0 40px 20px;
+  padding: 0 10px 20px;
   text-align: center;
   border-radius: 10px;
   background: #fff;
@@ -105,12 +139,13 @@ HOME
 }
 .home-link-callout-text {
   float: left;
+  width: 55%;
   margin-left: 20px;
 }
 .home-link-callout strong {
   display: block;
   margin-bottom: 5px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: 600;
   font-size: 1.1em;
   color: #636363;
@@ -122,6 +157,19 @@ HOME
 }
 .home-link-callout a {
   color: #02a4ef;
+}
+#home-carousel-2 {
+  text-align: center;
+}
+#home-carousel-2 .fun-facts {
+  position: relative;
+  top: -10px;
+  padding: 10px 20px;
+  font-size: .8em;
+  color: #fff;
+  background: #02a4ef;
+  border-radius: 5px;
+  font-weight: 600;
 }
 /* 
 --------------------
@@ -303,7 +351,7 @@ MEDIA QUERIES
     color: #777;
   }
   #home-banner .carousel-caption p {
-    margin: 40px 0 20px;
+    margin: 20px 0;
     font-size: 1.3em;
   }
   #home-banner .carousel-caption a {
@@ -313,7 +361,7 @@ MEDIA QUERIES
   }
   #home-banner .carousel-caption strong {
     display: block;
-    margin: 40px 0;
+    margin: 0 0 40px;
     font-size: 2.5em;
     line-height: 1;
   }
@@ -330,6 +378,18 @@ MEDIA QUERIES
   }
   #home-banner .addthis_toolbox {
     margin-top: 20px;
+  }
+  #home-carousel-2 .carousel-caption {
+    right: 0;
+    width: 50%;
+    text-align: left;
+  }
+  #home-carousel-2 .carousel-caption img {
+    width: 50%;
+    text-align: left;
+  }
+  .home-link-callout-text {
+    width: 45%;
   }
 }
 @media (min-width: 768px) {
