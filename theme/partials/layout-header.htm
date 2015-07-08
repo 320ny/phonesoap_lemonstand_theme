@@ -40,7 +40,7 @@
 				<ul id="main-nav" class="nav navbar-nav">
 					<li class="{{ active_page == 'problem' ? 'active' : null }}"><a href="#">THE PROBLEM</a></li>
 					<li class="{{ categories.count ? 'dropdown' : null }} {{ active_page == 'shop' ? 'active' : null }}">
-						<a class="dropdown-toggle" {{ categories.count ? 'data-toggle="dropdown"' : null }} id="shop-dropdown" href="{{ site_url('shop') }}">
+						<a class="dropdown-toggle store-nav" {{ categories.count ? 'data-toggle="dropdown"' : null }} id="shop-dropdown" href="{{ site_url('shop') }}">
 							STORE <!--{{ categories.count ? '<b class="caret">' : null }}</b>-->
 						</a>
 						{% if categories.count %}

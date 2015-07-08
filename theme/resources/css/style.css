@@ -51,7 +51,10 @@ HEADER
 }
 .navbar-default .navbar-nav#main-nav li a {
   font-weight: 600;
-  color: #ff6000;
+  color: #02a4ef;
+}
+.navbar-default .navbar-nav#main-nav li .store-nav {
+  color: #ff6000;;
 }
 .navbar-default .navbar-utils > ul > li > .btn:not(.cart-btn) {
   padding: 26px 15px 15px;
@@ -83,8 +86,8 @@ HOME
 }
 .carousel-video {
   position: absolute;
-  left: 98px;
-  bottom: 50px;
+  left: 104px;
+  bottom: 150px;
 }
 .carousel-video img {
   width: 229px;
@@ -189,6 +192,12 @@ HOME
 }
 #featured-products span {
   background: #F6F6F6;
+}
+#featured-products .product-price span {
+  background: #fff;
+}
+.carousel-inner {
+  border-radius: 10px;
 }
 /* 
 --------------------
@@ -318,10 +327,10 @@ FOOTER
   max-width: 130px;
 }
 .copyright {
-  width: 17%;
+  width: 20%;
   margin-right: 0;
   padding-top: 0;
-  padding-left: 4%;
+  padding-left: 5%;
   color: #fff;
   border-left: none;
 }
