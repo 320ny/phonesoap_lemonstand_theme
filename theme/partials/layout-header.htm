@@ -38,7 +38,7 @@
 			<div class="navbar-left">
 				{% set active_page = globals.active_page|default('home') %}
 				<ul id="main-nav" class="nav navbar-nav">
-					<li class="{{ active_page == 'problem' ? 'active' : null }}"><a href="#">THE PROBLEM</a></li>
+					<li class="{{ active_page == 'problem' ? 'active' : null }}"><a href="/how-dirty-are-cell-phones">THE PROBLEM</a></li>
 					<li class="{{ categories.count ? 'dropdown' : null }} {{ active_page == 'shop' ? 'active' : null }}">
 						<a class="dropdown-toggle store-nav" {{ categories.count ? 'data-toggle="dropdown"' : null }} id="shop-dropdown" href="{{ site_url('shop') }}">
 							STORE <!--{{ categories.count ? '<b class="caret">' : null }}</b>-->

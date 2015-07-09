@@ -250,6 +250,20 @@ HOME
 /* 
 --------------------
 
+THE PROBLEM
+
+--------------------
+*/
+.the-problem img {
+  width: 100%;
+}
+.the-problem .row div {
+  background: #fff;
+}
+
+/* 
+--------------------
+
 FOOTER
 
 --------------------
