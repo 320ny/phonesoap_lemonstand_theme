@@ -7,12 +7,43 @@ url: /how-dirty-are-cell-phones
 ---
 
 <div class="the-problem">
-  <div class="page-section row">
-    <div class="col-xs-3">
+  <div class="row first-row">
+    <div class="col-xs-4 problem-left">
       <img src="{{ 'img/text-howdirty.jpg'|theme_resource }}" alt="" />
+      <h3>Our phones are filthy and it's not hard to see why.</h3>
+      <p>Lets face it, we are always touching dirty things. The problem is, we are also always touching our phones, transferring that bacteria to our devices! We wash our hands, but never clean our phones! Have you ever used your phone in the bathroom? (Don't worry, we all have.) Then it shouldn't surprise you that 1 in 6 cell phones have fecal matter on them!</p>
+      <div class="video-popup">
+        {{ partial('video-modal', {'thumb_img': 'img/video-thumb.jpg'|theme_resource,'video_url': 'https://www.youtube.com/embed/TSQSblwFjYs'}) }}
+      </div>
     </div><!-- end col-xs-4 -->
-    <div class="col-xs-9">
+    <div class="col-xs-8 problem-right">
       <img src="{{ 'img/petri-dish@2x.jpg'|theme_resource }}" alt="" />
     </div><!-- end col-xs-4 -->
   </div><!-- end row -->
-</div><!-- end the problem -->
+
+  <div class="row odd-row">
+    <div class="col-xs-4 problem-left">
+      <img src="{{ 'img/text-dirtierthanyouthink.png'|theme_resource }}" alt="" />
+      <p>Have you even used a paper towel to open the door of a public restroom? Or tried to squeeze out without touching the handle after someone else opens the door? Do you use your foot to flush the toilet? Of course, because those things are loaded with germs!</p>
+      <p>Did you know that your cell phone has 18x more harmful bacteria than that handle in a public restroom we all try to avoid? If you have ever used your phone after leaving the bathroom, you made them dirtier than you did in the bathroom.</p>
+    </div><!-- end col-xs-4 -->
+    <div class="col-xs-8 problem-right">
+      <img src="{{ 'img/18-times-more@2x.jpg'|theme_resource }}" alt="" />
+    </div><!-- end col-xs-4 -->
+  </div><!-- end row -->
+
+  <div class="row">
+    <div class="col-xs-12 problem-single-img">
+      <img src="{{ 'img/how-does-it-dirty@2x.jpg'|theme_resource }}" alt="" />
+    </div><!-- end col-xs-12 -->
+  </div><!-- end row -->
+
+  <div class="row odd-row">
+    <div class="col-xs-12 problem-single-img">
+      <img src="{{ 'img/warmth-breeds@2x.jpg'|theme_resource }}" alt="" />
+      <h2>Breeding Ground For Bacteria</h2>
+      <p>Our phones don't just collect the bacteria from all of the grossness we touch, they BREED bacteria! Our phones are always warm from the battery and we store them in tight, dark spaces like pockets and purses. Your phone is where germs go to party.</p>
+    </div><!-- end col-xs-12 -->
+  </div><!-- end row -->
+
+</div><!-- end the problem --> 

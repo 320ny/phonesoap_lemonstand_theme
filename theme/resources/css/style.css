@@ -12,6 +12,10 @@ body {
 strong {
   font-weight: 600;
 }
+h1, h2, h3, p {
+  font-family: arial, sans-serif;
+  color: #636363;
+}
 #page-content {
   background: #F6F6F6;
 }
@@ -254,13 +258,67 @@ THE PROBLEM
 
 --------------------
 */
+.the-problem {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.the-problem .row {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.the-problem .first-row {
+  border-radius: 10px 10px 0 0;
+}
+.the-problem .odd-row,
+.the-problem .odd-row .problem-left {
+  background: #f6f6f6 !important;
+}
+.the-problem h3 {
+  padding-left: 15%;
+  font-size: 1.4em;
+  line-height: 1.4;
+}
+.the-problem p {
+  padding: 0 15%;
+  margin: 5% 0;
+  font-size: .95em;
+}
 .the-problem img {
   width: 100%;
+  vertical-align: top;
 }
-.the-problem .row div {
+.the-problem .row {
+  padding: 0;
   background: #fff;
 }
-
+.the-problem .row div {
+  padding: 0;
+}
+.problem-left {
+  padding-top: 3%;
+  border-radius: 10px 0 0 0;
+}
+.problem-left img {
+  border-radius: 10px 0 0 0;
+  padding: 1% 0 0 1%;
+}
+.problem-right img {
+  border-radius: 0 10px 10px 0;
+}
+.problem-single-img img {
+  padding: 5% 0;
+}
+.problem-single-img h2 {
+  font-size: 2em;
+}
+.video-popup {
+  margin-top: 3%;
+}
+.video-popup img {
+  padding: 0 15%;
+  border-radius: 0;
+}
 /* 
 --------------------
 
