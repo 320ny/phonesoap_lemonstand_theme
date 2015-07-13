@@ -273,7 +273,6 @@ THE PROBLEM
 }
 .the-problem-nav ul {
   width: 100%;
-  max-width: 1100px;
   margin: 0 auto;
   padding: 0;
   background: #fff;
@@ -294,13 +293,22 @@ THE PROBLEM
   vertical-align: middle;
   color: #636363;
 }
+.the-problem-nav li a:hover,
+.the-problem-nav li a:focus {
+  text-decoration: none;
+  color: #02a4ef;
+}
 .the-problem-nav .buy-now {
   float: right;
   background: #ff6000;
   font-size: .9em;
   border-radius: 0 0 10px 0;
 }
-.the-problem-nav .buy-now a {
+.the-problem-nav .buy-now:hover {
+  background: #02a4ef;
+}
+.the-problem-nav .buy-now a,
+.the-problem-nav .buy-now a:hover {
   color: #fff;
 }
 .the-problem img {
@@ -331,25 +339,11 @@ THE PROBLEM
   vertical-align: top;
 }
 .the-problem .row {
-  padding: 50px 0 0;
+  padding: 0;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   background: #fff;
-}
-.the-problem .row div {
-  padding: 0;
-}
-.the-problem #how-dirty,
-.the-problem #why,
-.the-problem #solution {
-  padding-top: 80px;
-}
-.the-problem #healthier {
-  padding-top: 65px;
-}
-.the-problem #acne {
-  padding-top: 100px;
 }
 .problem-left {
   padding-top: 3%;
@@ -410,8 +404,105 @@ THE PROBLEM
   text-align: center;
   text-decoration: none;
 }
+.phonesoap a:hover {
+  background: #636363;
+}
 .phonesoap .btn-cta {
-  background: #e94214;
+  background: #ff6000;
+}
+.phonesoap .btn-cta:hover {
+  background: #02a4ef;
+}
+/* 
+--------------------
+
+DEVICES
+
+--------------------
+*/
+.devices {
+  padding: 40px 0;
+}
+.devices img {
+  width: 100%;
+  border-radius: 10px;
+}
+.devices h3 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+.devices .row {
+  margin-bottom: 1.5%;
+}
+.devices hr {
+  border-top-color: #ccc;
+}
+.devices ul,
+.devices li {
+  margin: 0;
+  padding: 0;
+}
+.devices li {
+  list-style-type: none;
+}
+.devices li a,
+.devices .device-item-wrapper a {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #02a4ef;
+  text-decoration: none;
+}
+.devices li a:hover {
+  opacity: .8;
+}
+.devices .device-wrapper,
+.devices .device-item-wrapper {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.devices .device-item-wrapper {
+  padding: 5% 0;
+  text-align: center;
+}
+.devices .device-wrapper {
+  padding: 10%;
+  margin-bottom: 5%;
+}
+.devices .device-wrapper a {
+  display: inline-block;
+  margin-top: 3%;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #02a4ef;
+  text-decoration: none;
+}
+.devices .device-wrapper img {
+  border-radius: 10px;
+}
+.devices .device-wrapper a:hover {
+  opacity: .8;
+}
+.devices .find-out a {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  color: #02a4ef;
+  text-decoration: none;
+}
+.devices .find-out h3 a {
+  text-align: left;
+}
+.devices .work-with {
+  background: #02a4ef;
+}
+.devices .work-with a {
+  color: #fff;
+  text-decoration: none;
 }
 /* 
 --------------------
@@ -572,6 +663,31 @@ MEDIA QUERIES
 
 --------------------
 */ 
+@media (min-width: 768px) {
+  .navbar-default #navbar-totals {
+    border-left: none;
+  }
+  .navbar-default #navbar-totals {
+    padding: 26px 15px 15px;
+  }
+  .carousel-indicators {
+    display: block;
+  }
+  .carousel-cta {
+    right: 60px;
+  }
+  .carousel-cta a {
+    padding: 12px 24px;
+    font-size: 1.3em;
+    border-radius: 14px 14px 0 0;
+  }
+  .carousel-video {
+    display: block;
+  }
+ .the-problem-nav ul {
+    max-width: 750px;
+ }
+}
 @media (min-width: 992px) {
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: 0;
@@ -699,26 +815,12 @@ MEDIA QUERIES
     font-weight: normal;
     font-size: 1em;
   }
+ .the-problem-nav ul {
+    max-width: 970px;
+ }
 }
-@media (min-width: 768px) {
-  .navbar-default #navbar-totals {
-    border-left: none;
-  }
-  .navbar-default #navbar-totals {
-    padding: 26px 15px 15px;
-  }
-  .carousel-indicators {
-    display: block;
-  }
-  .carousel-cta {
-    right: 60px;
-  }
-  .carousel-cta a {
-    padding: 12px 24px;
-    font-size: 1.3em;
-    border-radius: 14px 14px 0 0;
-  }
-  .carousel-video {
-    display: block;
-  } 
+@media (min-width: 1300px) {
+ .the-problem-nav ul {
+    max-width: 1100px;
+ }
 }
