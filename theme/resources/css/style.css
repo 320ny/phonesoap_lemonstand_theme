@@ -413,6 +413,9 @@ THE PROBLEM
 .phonesoap .btn-cta:hover {
   background: #02a4ef;
 }
+.col-xs-8.problem-right {
+  padding-right: 0;
+}
 /* 
 --------------------
 
@@ -460,6 +463,7 @@ DEVICES
 }
 .devices .device-wrapper,
 .devices .device-item-wrapper {
+  margin-bottom: 12%;
   border-radius: 10px;
   border: 1px solid #ccc;
   background: #fff;
@@ -470,7 +474,6 @@ DEVICES
 }
 .devices .device-wrapper {
   padding: 10%;
-  margin-bottom: 5%;
 }
 .devices .device-wrapper a {
   display: inline-block;

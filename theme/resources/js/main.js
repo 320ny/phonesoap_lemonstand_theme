@@ -360,7 +360,26 @@
 			  console.log('loaded');
 			});
 		}
+		
+		
+		//================
+	    //! ScrollTo elements
+	    //
+	    // Setup:
+	    //   <a class="jsScrollTo" href="#elementId">Click to scroll</a>
+	    //================
+        $(".jsScrollTo").click(function(e) {
+            e.preventDefault();
+            var elId = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(elId).offset().top - 100
+            }, 2000);
+        });
 	
 	});
+	
+
+      
+
   
 })(jQuery);
