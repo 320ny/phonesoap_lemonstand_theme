@@ -8,19 +8,58 @@ GLOBAL
 */ 
 body {
   background: #F6F6F6;
+  font-family: arial, sans-serif;
+  color: #636363;
 }
 strong {
   font-weight: 600;
 }
-h1, h2, h3, p {
+h1, h2, h3, p, strong {
   font-family: arial, sans-serif;
   color: #636363;
+}
+strong {
+  font-weight: 600;
+}
+a,
+a:hover {
+  color: #02a4ef;
+  text-decoration: none;
+}
+img {
+  width: 100%;
 }
 #page-content {
   background: #F6F6F6;
 }
 #cart, #receipt, #order, #new-products, #featured-products, #shop {
   background: #F6F6F6;
+}
+.btn {
+  display: inline-block;
+  min-width: 80px;
+  padding: 11px 20px 10px;
+  font-size: 1.1em;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+.btn:hover {
+  color: #fff;
+}
+.btn-prime {
+  background: #ff6000;
+}
+.btn-prime:hover {
+  background: #02a4ef;
+}
+.btn-second {
+  background: #02a4ef;
+}
+.btn-second:hover {
+  background: #636363;
 }
 /* 
 --------------------
@@ -510,6 +549,82 @@ DEVICES
 /* 
 --------------------
 
+DEVICES - PAGES
+
+--------------------
+*/
+.devices-page .enhanced {
+  font-size: 1.3em;
+  margin: 20px 0;
+}
+.devices-page h1 {
+  font-size: 3.5em;
+  font-weight: 300;
+}
+.devices-page h2 {
+  margin-top: 20%;
+  margin-bottom: 5%;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+.devices-page img {
+  border-radius: 10px;
+}
+.devices-page strong {
+  font-size: 1.2em;
+}
+.device-section-wrapper {
+  width: 100%;
+  padding: 0 0 0 5%;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.device-section-wrapper-alt {
+  background: #f6f6f6;
+  border-radius: 0 0 10px 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.device-section-wrapper.cases {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.devices-page .device-section-left,
+.devices-page .device-section-right {
+  display: block;
+  width: 100%;
+  vertical-align: top;
+}
+.devices-page .device-section-right {
+  padding-bottom: 5%;
+}
+.devices-page .device-section-left {
+  padding: 5% 5% 0 0;
+}
+.device-section-wrapper-alt .device-section-right {
+  padding: 0 15% 5% 0;
+}
+.device-section-wrapper-alt .device-section-left {
+  padding: 0;
+}
+.devices-page .logo-text {
+  max-width: 150px;
+  border-radius: 0;
+}
+.device-right {
+  padding-left: 3%;
+}
+.devices-page .btn {
+  margin-right: 2%;
+  margin-top: 2%;
+}
+/* 
+--------------------
+
 FOOTER
 
 --------------------
@@ -562,6 +677,7 @@ FOOTER
 .social-icons img {
   display: inline-block;
   margin: 0 10px 20px 0;
+  max-width: 55px;
 }
 .mailchimp {
   margin-top: 20px;
@@ -687,9 +803,14 @@ MEDIA QUERIES
   .carousel-video {
     display: block;
   }
- .the-problem-nav ul {
+  .the-problem-nav ul {
     max-width: 750px;
- }
+  }
+  .devices-page .device-section-left,
+  .devices-page .device-section-right {
+    display: inline-block;
+    width: 50%;
+  }
 }
 @media (min-width: 992px) {
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
