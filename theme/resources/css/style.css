@@ -82,6 +82,12 @@ HEADER
   max-width: 1270px;
   margin: 0 auto 10px;
 }
+.navbar .navbar-header .navbar-brand {
+  padding-top: 3.4%;
+}
+.navbar > .container .navbar-brand img {
+  width: 150px;
+}
 .navbar-default .navbar-utils .cart-btn {
   background: #ff6000;
   border: none;
@@ -575,7 +581,7 @@ DEVICES - PAGES
 }
 .device-section-wrapper {
   width: 100%;
-  padding: 0 0 0 5%;
+  padding: 0 0 5% 5%;
   background: #fff;
   border-radius: 10px 10px 0 0;
   border-left: 1px solid #ccc;
@@ -600,13 +606,12 @@ DEVICES - PAGES
   vertical-align: top;
 }
 .devices-page .device-section-right {
-  padding-bottom: 5%;
 }
 .devices-page .device-section-left {
   padding: 5% 5% 0 0;
 }
 .device-section-wrapper-alt .device-section-right {
-  padding: 0 15% 5% 0;
+  padding: 0 15% 0 0;
 }
 .device-section-wrapper-alt .device-section-left {
   padding: 0;
@@ -622,6 +627,191 @@ DEVICES - PAGES
   margin-right: 2%;
   margin-top: 2%;
 }
+/* 
+--------------------
+
+FAQ
+
+--------------------
+*/
+.faq {
+  padding: 40px 0;
+}
+.faq img {
+  width: 100%;
+  border-radius: 10px;
+}
+.faq h3 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+.faq h6 {
+  padding: 0 8% 10%;
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #02a4ef;
+}
+.faq .row {
+  margin-bottom: 1.5%;
+}
+.faq hr {
+  border-top-color: #ccc;
+}
+.faq ul,
+.faq li {
+  margin: 0;
+  padding: 0;
+}
+.faq li {
+  list-style-type: none;
+}
+.faq li a,
+.faq .faq-item-wrapper a {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #02a4ef;
+  text-decoration: none;
+}
+.faq .faq-item-wrapper a {
+  font-weight: 300;
+}
+.faq li a:hover {
+  opacity: .8;
+}
+.faq .faq-wrapper,
+.faq .faq-item-wrapper {
+  margin-bottom: 12%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.faq .faq-item-wrapper {
+  padding: 5% 0 0;
+  text-align: center;
+}
+.faq .faq-intro {
+  padding-top: 10%;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  background: #fff;
+}
+.faq .faq-intro h3 {
+  margin-bottom: 10%;
+  padding: 0 10%;
+}
+.faq .faq-intro img {
+  border-radius: 0;
+}
+.faq .faq-wrapper {
+  padding: 10%;
+  border-radius: 0 0 10px 10px;
+}
+.faq .faq-wrapper a {
+  display: inline-block;
+  margin-top: 3%;
+  font-size: 1.1em;
+  color: #02a4ef;
+  text-decoration: none;
+}
+.faq .faq-wrapper strong {
+  display: block;
+  font-size: 1.1em;
+}
+.faq .faq-wrapper a.btn {
+  color: #fff;
+}
+.faq .faq-wrapper img {
+  border-radius: 10px;
+}
+.faq .faq-wrapper a:hover {
+  opacity: .8;
+}
+.faq .faq-wrapper p {
+  margin-bottom: 10%;
+}
+a.faq-contact {
+  display: inline-block;
+  margin-bottom: 10%;
+}
+.faq .find-out a {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  color: #02a4ef;
+  text-decoration: none;
+}
+
+
+/*
+.faq .enhanced {
+  font-size: 1.3em;
+  margin: 20px 0;
+}
+.faq h1 {
+  font-size: 3.5em;
+  font-weight: 300;
+}
+.devices-page img {
+  border-radius: 10px;
+}
+.devices-page strong {
+  font-size: 1.2em;
+}
+
+.device-section-wrapper {
+  width: 100%;
+  padding: 0 0 5% 5%;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.device-section-wrapper-alt {
+  background: #f6f6f6;
+  border-radius: 0 0 10px 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.device-section-wrapper.cases {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.devices-page .device-section-left,
+.devices-page .device-section-right {
+  display: block;
+  width: 100%;
+  vertical-align: top;
+}
+.devices-page .device-section-right {
+}
+.devices-page .device-section-left {
+  padding: 5% 5% 0 0;
+}
+.device-section-wrapper-alt .device-section-right {
+  padding: 0 15% 0 0;
+}
+.device-section-wrapper-alt .device-section-left {
+  padding: 0;
+}
+.devices-page .logo-text {
+  max-width: 150px;
+  border-radius: 0;
+}
+.device-right {
+  padding-left: 3%;
+}
+.devices-page .btn {
+  margin-right: 2%;
+  margin-top: 2%;
+}
+*/
 /* 
 --------------------
 
@@ -770,6 +960,9 @@ FOOTER
   font-weight: normal;
   font-size: 1em;
 }
+.copyright strong {
+  color: #fff;
+}
 .fb_iframe_widget,
 .fb_iframe_widget span,
 .fb_iframe_widget iframe {
@@ -788,6 +981,12 @@ MEDIA QUERIES
   }
   .navbar-default #navbar-totals {
     padding: 26px 15px 15px;
+  }
+  .navbar .navbar-header .navbar-brand {
+    padding-top: 12px;
+  }
+  .navbar > .container .navbar-brand img {
+    width: 100%;
   }
   .carousel-indicators {
     display: block;
