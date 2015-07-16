@@ -22,7 +22,8 @@ strong {
   font-weight: 600;
 }
 a,
-a:hover {
+a:hover,
+a:focus {
   color: #02a4ef;
   text-decoration: none;
 }
@@ -60,6 +61,9 @@ img {
 }
 .btn-second:hover {
   background: #636363;
+}
+.enhanced {
+  font-size: 1.3em;
 }
 /* 
 --------------------
@@ -745,73 +749,83 @@ a.faq-contact {
   color: #02a4ef;
   text-decoration: none;
 }
+/* 
+--------------------
 
+FAQ - SECTION
 
-/*
-.faq .enhanced {
-  font-size: 1.3em;
-  margin: 20px 0;
+--------------------
+*/
+.faq-breadcrumbs {
+  padding: 3.5% 3.5% 0;
+  font-size: .9em;
 }
-.faq h1 {
+.faq-breadcrumbs a,
+.faq-breadcrumbs span {
+  font-weight: 600;
+}
+.faq-breadcrumbs i {
+  margin: 0 1%;
+  color: #02a4ef;
+  font-weight: 600;
+}
+.faq-section h1 {
+  margin: 0 0 5%;
   font-size: 3.5em;
   font-weight: 300;
 }
-.devices-page img {
+.faq-section img {
   border-radius: 10px;
 }
-.devices-page strong {
-  font-size: 1.2em;
+.faq-section strong {
+  display: block;
+  margin-bottom: 5%;
+  font-weight: 600;
+  font-size: 1.4em;
 }
-
-.device-section-wrapper {
-  width: 100%;
-  padding: 0 0 5% 5%;
-  background: #fff;
-  border-radius: 10px 10px 0 0;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-}
-.device-section-wrapper-alt {
-  background: #f6f6f6;
-  border-radius: 0 0 10px 10px;
+.faq-section-odd,
+.faq-section-even {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  background: #fff;
 }
-.device-section-wrapper.cases {
-  border-radius: 10px;
-  border: 1px solid #ccc;
+.faq-section-even {
+  background: #f6f6f6;
 }
-.devices-page .device-section-left,
-.devices-page .device-section-right {
+.faq-section-start {
+  border-radius: 10px 10px 0 0;
+  border-top: 1px solid #ccc;
+}
+.faq-section-end {
+  border-radius: 0 0 10px 10px;
+}
+.faq-section-left {
   display: block;
   width: 100%;
+  padding: 5% 5% 5%;
   vertical-align: top;
 }
-.devices-page .device-section-right {
+.faq-section-right {
+  display: block;
+  width: 100%;
+  padding: 5% 5% 5% 0;
+  vertical-align: top;
 }
-.devices-page .device-section-left {
-  padding: 5% 5% 0 0;
+.faq-section-text {
+  padding-left: 7%;
+  padding-right: 7%;
 }
-.device-section-wrapper-alt .device-section-right {
-  padding: 0 15% 0 0;
-}
-.device-section-wrapper-alt .device-section-left {
+.full-img {
   padding: 0;
 }
-.devices-page .logo-text {
-  max-width: 150px;
-  border-radius: 0;
+.faq-section-left.partial-full {
+  padding: 0;
 }
-.device-right {
-  padding-left: 3%;
+.faq-section-right.partial-full {
+  padding: 0;
 }
-.devices-page .btn {
-  margin-right: 2%;
-  margin-top: 2%;
-}
-*/
+
 /* 
 --------------------
 
@@ -1009,6 +1023,20 @@ MEDIA QUERIES
   .devices-page .device-section-right {
     display: inline-block;
     width: 50%;
+  }
+  .faq-section-left,
+  .faq-section-right {
+    display: inline-block;
+    width: 50%;
+  }
+  .full-img {
+    padding: 5% 0 0 0;
+  }
+  .faq-section-left.partial-full {
+    padding: 5% 0 5% 3%;
+  }
+  .faq-section-right.partial-full {
+    padding: 5% 3% 5% 0;
   }
 }
 @media (min-width: 992px) {
