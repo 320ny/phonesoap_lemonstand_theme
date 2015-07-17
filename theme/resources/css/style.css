@@ -760,6 +760,9 @@ FAQ - SECTION
   padding: 3.5% 3.5% 0;
   font-size: .9em;
 }
+.breadcrumbs-right {
+  padding: 0 3.5% 7% 0;
+}
 .faq-breadcrumbs a,
 .faq-breadcrumbs span {
   font-weight: 600;
@@ -774,6 +777,15 @@ FAQ - SECTION
   font-size: 3.5em;
   font-weight: 300;
 }
+.faq-section h2 {
+  margin: 0 0 5%;
+  font-size: 3em;
+  font-weight: 300;
+}
+.faq-section h2 em {
+  color: #02a4ef;
+  font-weight: 600;
+}
 .faq-section img {
   border-radius: 10px;
 }
@@ -782,6 +794,9 @@ FAQ - SECTION
   margin-bottom: 5%;
   font-weight: 600;
   font-size: 1.4em;
+}
+.faq-section .enhanced {
+  margin-bottom: 5%;
 }
 .faq-section-odd,
 .faq-section-even {
@@ -816,12 +831,14 @@ FAQ - SECTION
   padding-left: 7%;
   padding-right: 7%;
 }
-.full-img {
+.full-img,
+.true-full-img {
   padding: 0;
 }
-.faq-section-left.partial-full {
-  padding: 0;
+.faq-section-start .true-full-img img {
+  border-radius: 10px 0 0 0;
 }
+.faq-section-left.partial-full,
 .faq-section-right.partial-full {
   padding: 0;
 }
