@@ -65,6 +65,12 @@ img {
 .enhanced {
   font-size: 1.3em;
 }
+.success {
+  background: #02a4ef;
+  padding: 4px 10px;
+  color: #fff;
+  border: none;
+}
 /* 
 --------------------
 
@@ -93,9 +99,14 @@ HEADER
   width: 150px;
 }
 .navbar-default .navbar-utils .cart-btn {
+  min-width: 60px;
   background: #ff6000;
   border: none;
   border-radius: 0 0 12px 12px;
+}
+.cart-btn .fa-shopping-cart {
+  position: relative;
+  left: -3px;
 }
 .navbar-default .navbar-utils .cart-btn:hover {
   background: #02a4ef;
@@ -331,7 +342,7 @@ THE PROBLEM
 .the-problem-nav li {
   display: inline-block;
   margin: 0;
-  padding: .7% 2%;
+  padding: .7% 1.5%;
   height: 33px;
   list-style-type: none;
   font-family: arial, sans-serif;
@@ -442,7 +453,7 @@ THE PROBLEM
 }
 .phonesoap a {
   display: block;
-  width: 75%;
+  width: 90%;
   margin: 0 auto 3%;
   padding: 11px 0 10px;
   font-size: 1.1em;
@@ -653,7 +664,7 @@ FAQ
 }
 .faq h6 {
   padding: 0 8% 10%;
-  font-size: 1.05em;
+  font-size: 1em;
   font-weight: 600;
   color: #02a4ef;
 }
@@ -835,6 +846,9 @@ FAQ - SECTION
 .true-full-img {
   padding: 0;
 }
+.true-full-img img {
+  border-radius: 0;
+}
 .faq-section-start .true-full-img img {
   border-radius: 10px 0 0 0;
 }
@@ -842,6 +856,37 @@ FAQ - SECTION
 .faq-section-right.partial-full {
   padding: 0;
 }
+.complete-solution .btn {
+  width: 100%;
+  margin: 2% 0;
+}
+.wholesale-wrapper .faq-section-odd {
+  border-radius: 10px;
+}
+.wholesale {
+  width: 100%;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+}
+.wholesale-left {
+  display: block;
+  width: 100%;
+  padding: 3% 3% 3% 5%;
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+}
+.wholesale-right {
+  display: block;
+  width: 100%;
+  padding: 3%;
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+}
+.wholesale h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
 
 /* 
 --------------------
@@ -1054,6 +1099,15 @@ MEDIA QUERIES
   }
   .faq-section-right.partial-full {
     padding: 5% 3% 5% 0;
+  }
+  .wholesale-left {
+    display: inline-block;
+    width: 30%;
+  }
+  .wholesale-right {
+    display: inline-block;
+    width: 70%;
+    border-left: 1px solid #ccc;
   }
 }
 @media (min-width: 992px) {
