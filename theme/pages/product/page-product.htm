@@ -31,6 +31,16 @@ url: '/product/:urlName'
 				<h2>We are sorry, the requested product was not found.</h2>
 			{% endif %}
 		{{ close_form() }}
+        
 	</section>
+    
+    <div class="reviews">
+        <a id="reviews"></a>
+        {% for review in product.reviews() %}
+            {{ partial('shop-product-review', {'review': review, 'product': product } ) }}
+        {% endfor %}
+        {{ partial('shop-product-review-form', {'product': product, 'customer': customer } ) }}
+    </div>
+	
 	{{ partial('shop-product-marketing') }}
 </div>

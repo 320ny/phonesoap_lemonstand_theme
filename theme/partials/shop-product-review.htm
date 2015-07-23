@@ -1,0 +1,18 @@
+{% set product_rating = product.rating() %}
+<p>
+    {% if product_rating.total_reviews %}
+        {% for i in range(1, product_rating.average_int) %}&starf;{% endfor %}
+        {% if product_rating.average_int != 5 %}{% for i in range(1, 5 - product_rating.average_int) %}&star;{% endfor %}{% endif %}
+         ({{product_rating.average}})
+    {% else %}
+        &star;&star;&star;&star;&star;
+         (- / 5)
+    {% endif %}
+    </p>
+    <p>
+    {% if product_rating.total_reviews %}
+        <a href="#reviews">See all {{ product_rating.total_reviews }} reviews</a>
+    {% else %}
+        <a href="#reviews">Add the first review</a>
+    {% endif %}
+</p>

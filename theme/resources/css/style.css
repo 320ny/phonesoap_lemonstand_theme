@@ -18,8 +18,8 @@ h1, h2, h3, p, strong {
   font-family: arial, sans-serif;
   color: #636363;
 }
-strong {
-  font-weight: 600;
+h1 {
+  font-size: 2.5em;
 }
 a,
 a:hover,
@@ -684,7 +684,6 @@ FAQ
 }
 .faq li a,
 .faq .faq-item-wrapper a {
-  display: inline-block;
   font-size: 1.1em;
   font-weight: 600;
   color: #02a4ef;
@@ -886,6 +885,72 @@ FAQ - SECTION
   font-size: 1.3em;
   font-weight: 600;
 }
+.our-story .faq-section-text img {
+  max-width: 324px;
+  margin-bottom: 5%;
+}
+.faq-section-right.our-story-img{
+  padding: 8% 13% 2% 7%;
+}
+.faq-section-left.our-story-img {
+  padding: 8% 7% 2% 13%;
+}
+.faq-section-start .faq-section-right.our-story-img {
+  padding-top: 0;
+}
+.faq-section-end .faq-section-left.our-story-img {
+  padding: 5% 3% 2% 13%;
+}
+/* 
+--------------------
+
+CONTACT
+
+--------------------
+*/
+.contact-content {
+  padding: 1% 4% 2%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.contact-wrapper h1 {
+  display: inline-block;
+}
+.contact-wrapper .social-icons {
+  display: block;
+  text-align: left;
+  clear: both;
+}
+.contact-wrapper .social-icons img {
+  max-width: 35px;
+}
+.contact-left-right-wrapper {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  clear: both;
+}
+.contact-left-right-wrapper strong {
+  display: block;
+  margin: 3% 0;
+  font-size: 1.3em;
+}
+.contact-left {
+  display: block;
+  width: 100%;
+  padding: 2% 3% 2% 0;
+  vertical-align: top;
+}
+.contact-right {
+  display: block;
+  width: 100%;
+  padding: 5%;
+  vertical-align: top;
+}
+.contact-right strong {
+  margin: 0 0 5%;
+  border-bottom: 1px solid #ccc;
+}
 
 
 /* 
@@ -1052,6 +1117,9 @@ MEDIA QUERIES
 --------------------
 */ 
 @media (min-width: 768px) {
+  h1 {
+    font-size: 3.5em;
+  }
   .navbar-default #navbar-totals {
     border-left: none;
   }
@@ -1107,6 +1175,27 @@ MEDIA QUERIES
   .wholesale-right {
     display: inline-block;
     width: 70%;
+    border-left: 1px solid #ccc;
+  }
+  .contact-wrapper .social-icons {
+    display: inline-block;
+    float: right;
+    text-align: right;
+    clear: none;
+  }
+  .contact-wrapper .social-icons img {
+    max-width: 55px;
+  }
+  .contact-wrapper h1 {
+    float: left; 
+  }
+  .contact-left {
+    display: inline-block;
+    width: 25%;
+  }
+  .contact-right {
+    display: inline-block;
+    width: 75%;
     border-left: 1px solid #ccc;
   }
 }
