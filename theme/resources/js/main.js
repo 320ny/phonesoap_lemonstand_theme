@@ -347,9 +347,9 @@
 		});
 		
 		
-//===============
-//! Equalize row heights	 
-//===============
+        //===============
+        //! Equalize row heights	 
+        //===============
 		var container = document.querySelector('.product-grid > .row');
 		var msnry;
 		if ($('.product-grid').length) {
@@ -375,11 +375,33 @@
                 scrollTop: $(elId).offset().top - 100
             }, 2000);
         });
-	
+        
+        //================
+        //! Review functionality
+        //================
+        var ReviewManager = function() {
+            this.reviewButton = $('#writeReviewButton');
+            this.reviewForm = $('#reviewForm');
+            
+            this.start = function() {
+                var _this = this;
+                this.reviewButton.on('click', function() {
+                    console.log(_this.reviewForm);
+                    _this.reviewForm.toggle();
+                });
+            }
+        };
+        
+        var reviewManager = new ReviewManager();
+        reviewManager.start();
+        
+        //================
+        //! Contact Form
+        //================
+        $('#contactForm').on('submit', function() {
+           $('#fields_name').val($('#fields_first_name').val() + ' ' + $('#fields_last_name').val());
+        });
 	});
 	
-
-      
-
   
 })(jQuery);

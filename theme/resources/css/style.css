@@ -312,6 +312,25 @@ HOME
 #home-banner .addthis_toolbox {
   margin-top: 20px;
 }
+/*
+a.btn.btn-default.btn-quick-view.hidden-xs,
+a.btn.btn-danger.btn-add-cart {
+  display: inline-block !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+}
+a.btn.btn-danger.btn-add-cart {
+  background: #ff6000;
+  border: none;
+}
+a.btn.btn-default.btn-quick-view.hidden-xs {
+  background: #02a4ef;
+  border: none;
+}
+*/
+.product-item .buttons-holder {
+  display: none;
+}
 /* 
 --------------------
 
@@ -952,7 +971,27 @@ CONTACT
   margin: 0 0 5%;
   border-bottom: 1px solid #ccc;
 }
+/* 
+--------------------
 
+WARRANTY & PRIVACY POLICY
+
+--------------------
+*/
+.warranty-content {
+  padding: 1% 4% 2%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.warranty-content h2 {
+  font-size: 3em;
+}
+.warranty-content strong {
+  display: block;
+  margin: 3% 0 1%;
+  font-size: 1.3em;
+}
 
 /* 
 --------------------

@@ -1,0 +1,6 @@
+<section>
+    {% for review in product.reviews() %}
+      {{ partial('shop-product-review', {'review': review}) }}
+    {% endfor %}
+    {{ partial('shop-product-review-form', {'product': product, 'customer': customer } ) }}
+</section>

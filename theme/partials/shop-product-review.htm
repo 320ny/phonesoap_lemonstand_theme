@@ -1,18 +1,21 @@
-{% set product_rating = product.rating() %}
-<p>
-    {% if product_rating.total_reviews %}
-        {% for i in range(1, product_rating.average_int) %}&starf;{% endfor %}
-        {% if product_rating.average_int != 5 %}{% for i in range(1, 5 - product_rating.average_int) %}&star;{% endfor %}{% endif %}
-         ({{product_rating.average}})
-    {% else %}
-        &star;&star;&star;&star;&star;
-         (- / 5)
-    {% endif %}
-    </p>
-    <p>
-    {% if product_rating.total_reviews %}
-        <a href="#reviews">See all {{ product_rating.total_reviews }} reviews</a>
-    {% else %}
-        <a href="#reviews">Add the first review</a>
-    {% endif %}
-</p>
+<!-- Review for SEO -->
+<div itemscope itemtype="http://schema.org/Review" class="hidden">
+  <div itemprop="itemReviewed" itemscope itemtype="http://schema.org/{{ product.productType }}">
+    <span itemprop="name">{{ product.name }}</span>
+  </div>
+  <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+    <span itemprop="ratingValue">{{ review.rating }}</span>
+    <span itemprop="name">{{ review.title }}</span>
+  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span itemprop="name">{{ review.from_name }}</span>
+  </span>
+  <span itemprop="reviewBody">{{ review.comment }}</span>
+</div>
+<!-- END Review for SEO -->
+
+<div class="review">
+    <h4>{{review.title}}</h4>
+    <p>Posted by {{review.from_name}}</p>
+    <p>{{review.comment}}</p>
+</div>
+<hr>
