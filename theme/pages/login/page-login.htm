@@ -24,8 +24,9 @@ url: /login
 						<input type="password" name="password" id="password" class="form-control" placeholder="Password">
 					</div>
 					<div class="col-xs-12 form-group clearfix">
-						<a class="btn btn-second pull-left" href="{{ site_url('/password-restore') }}">forgot your password?</a>
-						<button class="btn btn-second pull-right" type="submit">Log In <i class="fa fa-lock"></i></button>
+						<button class="btn btn-second" type="submit">Log In <i class="fa fa-lock"></i></button>
+						<br><br>
+						<a class="btn btn-second" href="{{ site_url('/password-restore') }}">forgot your password?</a>
 						<input type="hidden" name="redirect" value="{{ site_url(root_url('/')) }}"/>
 					</div>
 				</div>
