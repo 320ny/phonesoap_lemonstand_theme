@@ -14,7 +14,7 @@ body {
 strong {
   font-weight: 600;
 }
-h1, h2, h3, p, strong {
+h1, h2, h3, h4, h5, h6, p, strong {
   font-family: arial, sans-serif;
   color: #636363;
 }
@@ -23,7 +23,8 @@ h1 {
 }
 a,
 a:hover,
-a:focus {
+a:focus,
+.section-title a:hover {
   color: #02a4ef;
   text-decoration: none;
 }
@@ -71,6 +72,18 @@ img {
   color: #fff;
   border: none;
   clear: both;
+}
+.simple-page-wrapper .simple-page-content {
+  padding: 1% 4% 2%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.password-restore {
+  margin-top: 5%;
+}
+.col-split-2:before {
+  background: none;
 }
 /* 
 --------------------
@@ -125,6 +138,19 @@ HEADER
 .navbar-default .navbar-utils > ul > li > .btn:not(.cart-btn) {
   padding: 26px 15px 15px;
   color: #868485;
+}
+.nav > li > a {
+  padding: 10px 12px;
+}
+#mini-cart .subtotal {
+  float: none;
+  margin-bottom: 4%;
+}
+.mini-cart-totals .btn {
+  margin-bottom: 5%;
+}
+.mini-cart-totals .btn.btn-prime {
+  margin-bottom: 0;
 }
 /* 
 --------------------
@@ -978,12 +1004,6 @@ WARRANTY & PRIVACY POLICY
 
 --------------------
 */
-.warranty-content {
-  padding: 1% 4% 2%;
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
 .warranty-content h2 {
   font-size: 3em;
 }
@@ -992,7 +1012,22 @@ WARRANTY & PRIVACY POLICY
   margin: 3% 0 1%;
   font-size: 1.3em;
 }
+/* 
+--------------------
 
+CART
+
+--------------------
+*/ 
+#cart, #receipt, #order, #new-products, #featured-products, #shop {
+  background: #fff;
+}
+.quantity-selector .quantity-btn {
+  padding: 13px 4px 12px;
+  border: none;
+  background: #636363;
+  color: #fff;
+}
 /* 
 --------------------
 

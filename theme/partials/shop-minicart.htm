@@ -24,11 +24,12 @@
 	</ul>
     <div class="mini-cart-totals">
     	<h4 class="subtotal">Subtotal: {{ cart.getSubtotal()|currency }}</h4>
-    	<a class="btn btn-default btn-lg" href="{{ site_url('/cart') }}">View Cart</a>
+      <a class="btn btn-second" href="{{ site_url('/cart') }}">View Cart</a>
+      <br>
     	{% if customer %}
-    	<a class="col-xs-12 btn btn-danger solid btn-lg" href="{{ site_url('/checkout') }}">Checkout</a>
+    	<a class="col-xs-12 btn btn-prime" href="{{ site_url('/checkout') }}">Checkout</a>
     	{% else %}
-    	<a class="col-xs-12 btn btn-danger solid btn-lg" href="{{ site_url('/checkout-start') }}">Checkout</a>
+    	<a class="col-xs-12 btn btn-prime" href="{{ site_url('/checkout-start') }}">Checkout</a>
     	{% endif %}
     </div>
 {% else %}

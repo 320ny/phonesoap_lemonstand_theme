@@ -6,14 +6,19 @@ published: true
 name: Cart
 url: /cart
 ---
-<div id="banner" class="jumbotron row">
-	
-	<h1>Shopping Cart</h1>
 
-</div>
+<div class="simple-page-wrapper">
+  <div class="row page-section">
+    <div class="col-md-12">
+      <div class="simple-page-content">
 
-<section id="cart" class="page-section row">
-	{{ open_form({'class': 'custom'}) }}
-		<div id="cart-content">{{ partial('shop-cart-content') }}</div>
-	{{ close_form() }}	
-</section>
+        <section id="cart" class="page-section row">
+          {{ open_form({'class': 'custom'}) }}
+            <div id="cart-content">{{ partial('shop-cart-content') }}</div>
+          {{ close_form() }}  
+        </section>
+
+      </div><!-- end simple-page-content -->
+    </div><!-- end col-md-12 -->
+  </div><!-- end row page-section -->
+</div><!-- end simple-page-wrapper -->

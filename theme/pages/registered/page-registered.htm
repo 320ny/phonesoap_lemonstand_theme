@@ -5,15 +5,19 @@ published: true
 name: Registered
 url: /registered
 ---
-<div id="banner" class="jumbotron row">
-	<h1>Registration</h1>
-</div>
-<section class="page-section">
-    {% if customer %}
-        <h2>Thank you for registering!</h2>
-        <h3>A confirmation email has been sent to your email address.</h3>
-        <p>You have been automatically logged in.</p>
-    {% else %}
-        <p class="h6">Please <a href="{{ root_url('/login') }}">sign in</a> using your email and password.</p>
-    {% endif %}
-</section>
+
+<div class="simple-page-wrapper">
+  <div class="row page-section">
+    <div class="col-md-12">
+      <div class="simple-page-content">
+        {% if customer %}
+            <h2>Thank you for registering!</h2>
+            <h2>A confirmation email has been sent to your email address.</h2>
+            <p>You have been automatically logged in.</p>
+        {% else %}
+            <p class="h6">Please <a href="{{ root_url('/login') }}">sign in</a> using your email and password.</p>
+        {% endif %}
+      </div><!-- end simple-page-content -->
+    </div><!-- end col-md-12 -->
+  </div><!-- end row page-section -->
+</div><!-- end simple-page-wrapper -->
