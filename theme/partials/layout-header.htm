@@ -45,9 +45,10 @@
 						</a>
 						{% if categories.count %}
 						<ul class="dropdown-menu" role="menu" aria-labelledby="shop-dropdown">
+							<!--
 							<li role="presentation">
 								<a href="{{ site_url('products') }}?orderBy=sku">PhoneSoap Products</a>
-							</li>
+							</li>-->
 							{% tree categories %}
 							{% for category in tree.items|extended_sort('name', false) %}
 							<li role="presentation">

@@ -48,6 +48,9 @@ img {
   text-align: center;
   text-decoration: none;
 }
+.btn:focus {
+  outline: none;
+}
 .btn:hover {
   color: #fff;
 }
@@ -62,6 +65,12 @@ img {
 }
 .btn-second:hover {
   background: #636363;
+}
+.btn-simple {
+  background: #636363;
+}
+.btn-simple:hover {
+  opacity: .8;
 }
 .enhanced {
   font-size: 1.3em;
@@ -151,6 +160,9 @@ HEADER
 }
 .mini-cart-totals .btn.btn-prime {
   margin-bottom: 0;
+}
+.navbar-default #navbar-totals.active {
+  background: #02a4ef;
 }
 /* 
 --------------------

@@ -7,14 +7,14 @@
     </div>
     
     <div id="cart-actions" class="btn-holder clearfix">
-        <a class="btn btn-default btn-update-cart" href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=shop-cart-content, #mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals">Update Cart <i class="fa fa-refresh"></i></a>
+        <a class="btn btn-simple btn-update-cart" href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=shop-cart-content, #mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals">Update Cart <i class="fa fa-refresh"></i></a>
         
         <div class="col-sm-6 col-lg-4 form-group">
             <input type="text" class="form-control" id="coupon-code" name="coupon" placeholder="Coupon Code" value="{{ coupon_code }}" />
             <label for="coupon-code">Coupon Code</label>
         </div>
         
-        <a class="btn btn-default btn-continue-shopping" href="{{ site_url('shop') }}" ><i class="fa fa-arrow-left"></i> Continue Shopping</a>
+        <a class="btn btn-second btn-continue-shopping" href="{{ site_url('/products?orderBy=sku') }}" ><i class="fa fa-arrow-left"></i> Continue Shopping</a>
     </div>
 </div>
 
@@ -32,8 +32,8 @@
         <li class="list-group-item important">Total: <span class="badge">{{ totals.total|currency }}</span></li>
     </ul>
     {% if customer %}
-    <a class="col-xs-12 btn btn-danger solid btn-lg" href="{{ site_url('/checkout') }}">Checkout</a>
+    <a class="col-xs-12 btn btn-prime" href="{{ site_url('/checkout') }}">Checkout</a>
     {% else %}
-    <a class="col-xs-12 btn btn-danger solid btn-lg" href="{{ site_url('/checkout-start') }}">Checkout</a>
+    <a class="col-xs-12 btn btn-prime" href="{{ site_url('/checkout-start') }}">Checkout</a>
     {% endif %}
 </div>
