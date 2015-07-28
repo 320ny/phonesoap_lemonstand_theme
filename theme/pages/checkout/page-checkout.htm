@@ -7,26 +7,31 @@ name: Checkout
 url: /checkout
 ---
 
-<div id="banner" class="jumbotron row">
-	
-	<h1>Checkout</h1>
+<div class="simple-page-wrapper">
+  <div class="row page-section">
+    <div class="col-md-12">
+      <div class="simple-page-content">
 
-</div>
-<section id="checkout" class="page-section row">
-	<div id="checkout-progress">
-		{{ partial("shop-checkout-progress") }}	
-	</div>
-		
-    <div class="col-sm-12 col-md-9">
+				<section id="checkout" class="page-section row">
+					<div id="checkout-progress">
+						{{ partial("shop-checkout-progress") }}	
+					</div>
+						
+				    <div class="col-sm-12 col-md-9">
+									
+						<div id="checkout-page">{{ partial('shop-checkout') }}</div>
+
+					</div>
 					
-		<div id="checkout-page">{{ partial('shop-checkout') }}</div>
+					<div id="cart-totals" class="col-sm-12 col-md-3">
+						{{ open_form({'class': 'custom'}) }}
+							{{ partial('shop-checkout-totals', {'items': items}) }}
+						{{ close_form() }}
+					</div>
+					
+				</section>
 
-	</div>
-	
-	<div id="cart-totals" class="col-sm-12 col-md-3">
-		{{ open_form({'class': 'custom'}) }}
-			{{ partial('shop-checkout-totals', {'items': items}) }}
-		{{ close_form() }}
-	</div>
-	
-</section>
+      </div><!-- end simple-page-content -->
+    </div><!-- end col-md-12 -->
+  </div><!-- end row page-section -->
+</div><!-- end simple-page-wrapper -->

@@ -50,6 +50,7 @@ img {
 }
 .btn:focus {
   outline: none;
+  color: #fff;
 }
 .btn:hover {
   color: #fff;
@@ -1027,7 +1028,7 @@ WARRANTY & PRIVACY POLICY
 /* 
 --------------------
 
-CART
+CART / CHECKOUT
 
 --------------------
 */ 
@@ -1039,6 +1040,27 @@ CART
   border: none;
   background: #636363;
   color: #fff;
+}
+section#checkout {
+  margin-top: 40px;
+}
+#checkout-progress .breadcrumb .active {
+  background: #02a4ef;
+}
+#checkout-progress .breadcrumb .active:after {
+  border-left-color: #02a4ef;
+}
+.custom-radio:checked + label::before {
+  background: #02a4ef;
+}
+#foo:checked,
+.custom-radio + label::before {
+  border-color: #02a4ef;
+}
+.btn-simple.btn-form-mirror {
+  min-width: initial;
+  padding: 10px 10px 8px;
+  border-radius: 0;
 }
 /* 
 --------------------
