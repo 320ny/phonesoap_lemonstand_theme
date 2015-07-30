@@ -17,6 +17,14 @@
         <h4 class="md-bordered-title">Your cart is empty!</h4>
         <a class="btn btn-primary col-xs-12" href="{{ site_url('shop') }}">Continue shopping <span class="fa fa-arrow-right"></span></a>
     {% endif %}
+    
+    <div>
+        <p id=>Have a coupon code? Click here.</p>
+        <form id="couponCodeForm" method="post" action="/cart">
+            <input type="text" id="coupon-code" class="form-control" name="coupon" placeholder="Coupon Code" value="{{ coupon_code }}">
+            <button>Apply</button>
+        </form>
+    </div>
 
     {{ partial("seal-verification") }}
 

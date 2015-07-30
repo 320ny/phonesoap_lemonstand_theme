@@ -52,9 +52,9 @@
 			The state selector updates automatically when the country changes. 
 			See app.js for the implementation details. 
 			-->        
-			<select data-mirror id="billing_country" class="chzn-select form-control" name="billingInfo[countryId]" data-state-selector="#billing_state" data-current-state="{{ billingInfo.stateId | default(1) }}">
+			<select data-mirror id="billing_country" class="chzn-select form-control" name="billingInfo[countryId]" data-state-selector="#billing_state" data-current-state="{{ billingInfo.stateId }}">
 			{% for country in countries %}
-			        <option {{ option_state(billingInfo.countryId | default(1), country.id) }} value="{{ country.id }}">{{ country.name }}</option>
+			        <option {{ option_state(billingInfo.countryId, country.id) }} value="{{ country.id }}">{{ country.name }}</option>
 			{% endfor %}
 			</select>
 		<span class="error"></span>
