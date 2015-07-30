@@ -16,6 +16,16 @@
 		 		$('.owl-next').addClass('fa fa-angle-right');
 		 	}
 		 });
+		 
+    //===============
+    //! HEADER MENU
+    // - display menu on hover
+    //===============
+
+    $("#shop-dropdown").mouseenter(function() {
+        $(this).trigger('click');
+        console.log("entering");
+    });
 //===============
 //! SEARCH		 
 //===============
@@ -199,12 +209,17 @@
 		$(".chzn-select").chosen({
 	        width: "100%"
 	    });
+
+	    
 	    $(window).on('onAjaxAfterUpdate', function() {
 	        $(".chzn-select").trigger("chosen:updated");
 	        $(".chzn-select").chosen({
 	            width: "100%"
 	        });
 	    });
+	    
+	   //
+	   $("#billing_country").trigger('change');
 		
 		//Next step btn
 		$(document).on('click', '.btn-checkout-step', function() {
@@ -380,13 +395,17 @@
         //! Review functionality
         //================
         var ReviewManager = function() {
-            this.reviewButton = $('#writeReviewButton');
+            this.showReviewsButton = $('#showReviewsButton');
+            this.reviewList = $('#reviewList')
+            this.writeReviewButton = $('#writeReviewButton');
             this.reviewForm = $('#reviewForm');
             
             this.start = function() {
                 var _this = this;
-                this.reviewButton.on('click', function() {
-                    console.log(_this.reviewForm);
+                this.showReviewsButton.on('click', function() {
+                    _this.reviewList.slideToggle();
+                });
+                this.writeReviewButton.on('click', function() {
                     _this.reviewForm.toggle();
                 });
             }

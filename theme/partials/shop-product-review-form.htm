@@ -1,61 +1,50 @@
-<button id="writeReviewButton">Write a Review</button>
-<div id="reviewForm" style="display:none;">
+<button id="writeReviewButton" class="btn btn-md">WRITE A REVIEW »</button>
+<div id="reviewForm" class="col-md-12" style="display:none;">
 {{ flash() }}
 {{ open_form({'data-ajax-handler': 'system:onSendMessage', 'data-test': 'true'}) }}
 
-    <div class="row">
-        <label>
-            Rating
-        </label>
-        <div>
-        <select id="item_rating" name="fields[item_rating]">
-            <option value="" diabled>-</option>
-            <option value="1">&starf;&star;&star;&star;&star;</option>
-            <option value="2">&starf;&starf;&star;&star;&star;</option>
-            <option value="3">&starf;&starf;&starf;&star;&star;</option>
-            <option value="4">&starf;&starf;&starf;&starf;&star;</option>
+    <div lass="col-sm-6 form-group">
+        <label>Rating</label>
+        <select id="item_rating" name="fields[item_rating]" class="form-control">
             <option value="5">&starf;&starf;&starf;&starf;&starf;</option>
+            <option value="4">&starf;&starf;&starf;&starf;&star;</option>
+            <option value="3">&starf;&starf;&starf;&star;&star;</option>
+            <option value="2">&starf;&starf;&star;&star;&star;</option>
+            <option value="1">&starf;&star;&star;&star;&star;</option>
         </select>
-            <span class="error"/>
-        </div>
-    </div>
-    <div class="row">
-        <div>
-            Title
-        </div>
-        <div>
-            <input type="text" id="subject" name="fields[subject]" value="" placeholder="Subject"/>
-            <span class="error"/>
-        </div>
-    </div>
-    <div class="row">
-        
-            <div class="col-xs-4 col-sm-3">Your Name</div>
-            <div class="col-xs-4 col-sm-3">Email</div>
-        
-    </div>
-    <div class="row">
-        <div class="col-xs-4 col-sm-3">
-            <input type="text" id="contact_name" name="fields[name]" value="" />
-            <span class="error"/>
-        </div>
-        <div class="col-xs-4 col-sm-3">
-            <input type="text" id="contact_email" name="fields[email]" value="" />
-            <span class="error"/>
-        </div>
+        <span class="error"/>
     </div>
 
-    <div class="row">
-        <div>
-            Review
-        </div>
-        <div>
-            <textarea id="contact_message" name="fields[message]" value="" rows="10" ></textarea>
-            <span class="error"/>
-        </div>
+    <div lass="col-sm-6 form-group">
+        <label>Title</label>
+        <input type="text" id="subject" name="fields[subject]" value="" class="form-control"/>
+        <span class="error"/>
+    </div>
+
+    <div lass="col-sm-6 form-group">
+        <label>Your Name</label>
+        <input type="text" id="contact_name" name="fields[name]" value="" class="form-control" />
+        <span class="error"/>
+    </div>
+    
+    <div lass="col-sm-6 form-group">
+        <label>Email</label>
+        <input type="text" id="contact_email" name="fields[email]" value="" class="form-control" />
+        <span class="error"/>
+    </div>
+
+    <div lass="col-sm-6 form-group">
+        <label>Review</label>
+        <textarea id="contact_message" name="fields[message]" value="" rows="10" class="form-control" ></textarea>
+        <span class="error"/>
     </div>
         
-    <input type="submit" class="button" value="Submit"/>
+    <br>
+    <div lass="col-sm-6 form-group">
+        <button class="btn btn-md">SUBMIT</button>
+    </div>
+    
+    <input type="hidden" name="successMessage" value="Thanks for your review!">
     <input type="text" name="hp" value="" style="display: none"/>
     <input type="hidden" name="fields[shop_customer_id]" value="{{customer.id}}"/>
     <input type="hidden" name="fields[shop_product_id]" value="{{product.id}}"/>

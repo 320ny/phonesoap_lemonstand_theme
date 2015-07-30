@@ -32,6 +32,15 @@
 		<label for="billing_city">City</label>
 		<span class="error"></span>
 	</div>
+
+	<div class="col-sm-6 form-group">
+		<label for="billing_state" class="hide">State</label>
+			<select data-mirror id="billing_state" class="chzn-select form-control" name="billingInfo[stateId]" data-ajax-refresh> 
+			{{ partial('shop-stateoptions', {'states': billingStates, 'selected': billingInfo.stateId }) }}
+			</select>
+		<span class="error"></span>
+	</div>
+
 	<div class="col-sm-6 form-group">
 		<input data-mirror type="text" class="form-control" id="billing_postalCode" name="billingInfo[postalCode]" value="{{ billingInfo.postalCode }}" placeholder="Zip Code"/>
 		<label for="billing_postalCode">Zip Code</label>
@@ -43,17 +52,10 @@
 			The state selector updates automatically when the country changes. 
 			See app.js for the implementation details. 
 			-->        
-			<select data-mirror id="billing_country" class="chzn-select form-control" name="billingInfo[countryId]" data-state-selector="#billing_state" data-current-state="{{ billingInfo.stateId }}">
+			<select data-mirror id="billing_country" class="chzn-select form-control" name="billingInfo[countryId]" data-state-selector="#billing_state" data-current-state="{{ billingInfo.stateId | default(1) }}">
 			{% for country in countries %}
-			<option {{ option_state(billingInfo.countryId, country.id) }} value="{{ country.id }}">{{ country.name }}</option>
+			        <option {{ option_state(billingInfo.countryId | default(1), country.id) }} value="{{ country.id }}">{{ country.name }}</option>
 			{% endfor %}
-			</select>
-		<span class="error"></span>
-	</div>
-	<div class="col-sm-6 form-group">
-		<label for="billing_state" class="hide">State</label>
-			<select data-mirror id="billing_state" class="chzn-select form-control" name="billingInfo[stateId]" data-ajax-refresh> 
-			{{ partial('shop-stateoptions', {'states': billingStates, 'selected': billingInfo.stateId}) }}
 			</select>
 		<span class="error"></span>
 	</div>
@@ -92,6 +94,15 @@
 		<label for="shipping_city">City</label>
 		<span class="error"></span>
 	</div>
+
+	<div class="col-sm-6 form-group">
+		<label for="shipping_state" class="hide">State</label>
+			<select data-mirror id="shipping_state" class="chzn-select form-control" name="shippingInfo[stateId]" data-ajax-refresh > 
+			{{ partial('shop-stateoptions', {'states': shippingStates, 'selected': shippingInfo.stateId}) }}
+			</select>
+		<span class="error"></span> 
+	</div>
+
 	<div class="col-sm-6 form-group">
 		<input data-mirror type="text" class="form-control" name="shippingInfo[postalCode]" id="shipping_postalCode" value="{{ shippingInfo.postalCode }}" placeholder="Zip Code"/>
 		<label for="shipping_postalCode">Zip Code</label>
@@ -99,19 +110,12 @@
 	</div>
 	<div class="col-sm-6 form-group">
 		<label for="shipping_country" class="hide">Country</label>
-			<select data-mirror id="shipping_country" class="chzn-select form-control" name="shippingInfo[countryId]" data-state-selector="#shipping_state" data-current-state="{{ shippingInfo.stateId }}" >
+			<select data-mirror id="shipping_country" class="chzn-select form-control" name="shippingInfo[countryId]" data-state-selector="#shipping_state" data-current-state="{{ shippingInfo.stateId | default(1) }}" >
 			{% for country in countries %}
-			<option {{ option_state(shippingInfo.countryId, country.id) }} value="{{ country.id }}">{{ country.name }}</option>
+			<option {{ option_state(shippingInfo.countryId | default(1), country.id) }} value="{{ country.id }}">{{ country.name }}</option>
 			{% endfor %}
 			</select>
 		<span class="error"></span>
-	</div>
-	<div class="col-sm-6 form-group">
-		<label for="shipping_state" class="hide">State</label>
-			<select data-mirror id="shipping_state" class="chzn-select form-control" name="shippingInfo[stateId]" data-ajax-refresh > 
-			{{ partial('shop-stateoptions', {'states': shippingStates, 'selected': shippingInfo.stateId}) }}
-			</select>
-		<span class="error"></span> 
 	</div>
 </div>
 

@@ -29,8 +29,17 @@
 		<div id="payment_method" class="form-group">
 			{{ open_form({'class': 'custom'}) }}
 			{% for method in paymentMethods %}			
-				<input class="custom-radio" name="paymentMethodId" value="{{ method.id }}" type="radio" id="payment-method{{ method.id }}" />
-				<label for="payment-method{{ method.id }}" class="choice-title h6">{{ method.name }}</label>
+				<div class="payment-method-wrapper">
+					<input class="custom-radio" name="paymentMethodId" value="{{ method.id }}" type="radio" id="payment-method{{ method.id }}" />
+					<label for="payment-method{{ method.id }}" class="choice-title h6">{{ method.name }}</label>
+
+					<!-- BENNICK make this img show next to the credit card label 
+					<img class="cc-img" src="{{ 'img/cards.jpg'|theme_resource }}" alt="" /> -->
+
+					<!-- BENNICK make this img show next to the paypal label
+					<img class="paypal-img" src="{{ 'img/paypal.jpg'|theme_resource }}" alt="" />-->
+
+				</div><!-- payment-method-wrapper -->
 			{% endfor %}
 			</form>
 		</div>

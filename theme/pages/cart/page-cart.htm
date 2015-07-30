@@ -18,6 +18,19 @@ url: /cart
           {{ close_form() }}  
         </section>
 
+        <aside class="cart-security">
+
+          <div>
+            <strong>Secure Checkout</strong>
+            <br>
+            {{ partial("seal-verification") }}
+          </div><div>
+            <strong>Accepted Payment options:</strong><br>
+            <img class="accepted-img" src="{{ 'img/accepted-payments.png'|theme_resource }}" alt="" />
+          </div>
+
+        </aside><!-- end cart-security -->
+
       </div><!-- end simple-page-content -->
     </div><!-- end col-md-12 -->
   </div><!-- end row page-section -->

@@ -1062,6 +1062,62 @@ section#checkout {
   padding: 10px 10px 8px;
   border-radius: 0;
 }
+#cart-content .btn-continue-shopping,
+#cart-content .btn-prime {
+  width: 100%;
+}
+#cart-content .btn-continue-shopping {
+  margin-top: 8%;
+}
+.seal-verification {
+  position: relative;
+  top: 5px;
+  text-align: center;
+}
+.seal-verification .authorize-seal img {
+  width: 90px;
+}
+.seal-verification .paypal-seal img {
+  height: 72px;
+  width: 72px;
+}
+div.AuthorizeNetSeal {
+  display: inline-block;
+}
+.payment-method-wrapper .cc-img {
+  width: 190px;
+}
+.payment-method-wrapper .paypal-img {
+  width: 58px;
+}
+.accepted-img {
+  max-width: 424px;
+}
+.cart-security {
+  margin-top: 5%;
+  padding: 3% 0 1%;
+  vertical-align: top;
+  border-top: 1px solid #ccc;
+}
+.cart-security .seal-verification {
+  display: inline-block;
+  position: static;
+  text-align: left;
+}
+.cart-security .seal-verification .paypal-seal img {
+  height: 72px;
+  width: 72px;
+}
+.cart-security div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+.cart-security strong {
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
 /* 
 --------------------
 

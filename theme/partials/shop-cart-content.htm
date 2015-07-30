@@ -8,13 +8,10 @@
     
     <div id="cart-actions" class="btn-holder clearfix">
         <a class="btn btn-simple btn-update-cart" href="#" data-ajax-handler="shop:cart" data-ajax-update="#cart-content=shop-cart-content, #mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals">Update Cart <i class="fa fa-refresh"></i></a>
-        
         <div class="col-sm-6 col-lg-4 form-group">
             <input type="text" class="form-control" id="coupon-code" name="coupon" placeholder="Coupon Code" value="{{ coupon_code }}" />
             <label for="coupon-code">Coupon Code</label>
         </div>
-        
-        <a class="btn btn-second btn-continue-shopping" href="{{ site_url('/products?orderBy=sku') }}" ><i class="fa fa-arrow-left"></i> Continue Shopping</a>
     </div>
 </div>
 
@@ -36,4 +33,5 @@
     {% else %}
     <a class="col-xs-12 btn btn-prime" href="{{ site_url('/checkout-start') }}">Checkout</a>
     {% endif %}
+    <a class="btn btn-second btn-continue-shopping" href="{{ site_url('/products?orderBy=sku') }}" ><i class="fa fa-arrow-left"></i> Continue Shopping</a>
 </div>
