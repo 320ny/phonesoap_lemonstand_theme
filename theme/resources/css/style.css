@@ -1072,7 +1072,6 @@ section#checkout {
 .seal-verification {
   position: relative;
   top: 5px;
-  text-align: center;
 }
 .seal-verification .authorize-seal img {
   width: 90px;
@@ -1102,7 +1101,6 @@ div.AuthorizeNetSeal {
 .cart-security .seal-verification {
   display: inline-block;
   position: static;
-  text-align: left;
 }
 .cart-security .seal-verification .paypal-seal img {
   height: 72px;
@@ -1117,7 +1115,17 @@ div.AuthorizeNetSeal {
   display: inline-block;
   margin-bottom: 2%;
 }
-
+.free-shipping {
+  padding: 5%;
+  margin-top: 8%;
+  border-top: 2px solid #02a4ef;
+}
+.free-shipping p {
+  margin: 0;
+  text-align: center;
+  color: #636363;
+  font-style: italic;
+}
 /* 
 --------------------
 

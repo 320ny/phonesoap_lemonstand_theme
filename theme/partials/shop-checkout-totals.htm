@@ -1,6 +1,6 @@
 <div id="cart-summary">
     {% if items.count %}
-        <h3 class="cart-summary-title">Secure Checkout</h3>
+        <h3 class="cart-summary-title">Order Summary</h3>
         <ul class="price-list list-group">
             {% if totals.discountTotal > 0 %}
                 <li class="list-group-item">Discount: <span class="badge">{{ totals.discountTotal|currency }}</span></li>
@@ -18,14 +18,15 @@
         <a class="btn btn-primary col-xs-12" href="{{ site_url('shop') }}">Continue shopping <span class="fa fa-arrow-right"></span></a>
     {% endif %}
     
-    <div>
-        <p id=>Have a coupon code? Click here.</p>
-        <form id="couponCodeForm" method="post" action="/cart">
-            <input type="text" id="coupon-code" class="form-control" name="coupon" placeholder="Coupon Code" value="{{ coupon_code }}">
-            <button>Apply</button>
-        </form>
-    </div>
+    {% if step == 'billing_info' %}
+        <div>
+            <p><a href='#' id="couponCodeToggle">Have a coupon code? Click here.</a></p>
+            <div id='couponCodeForm' style="display:none;">
+                <input type="text" id="coupon-code" class="form-control" name="coupon" placeholder="Enter Coupon Code" value="{{ coupon_code }}">
+            </div>
+        </div>
+    {% endif %}
 
+    <h3>Secure Checkout</h3>
     {{ partial("seal-verification") }}
-
 </div>

@@ -313,7 +313,7 @@
 	        $(this).sendRequest('shop:checkout', {
 	            update: {
 	                '#cart-totals': 'shop-checkout-totals',
-	                '#mini-cart': 'shop-minicart'
+	                '#mini-cart': 'shop-'
 	            }
 	        });
 	        $('#cart-totals .order-shipping .badge').html('<i class="fa fa-refresh fa-spin"/>');
@@ -362,6 +362,16 @@
 		});
 		
 		
+		var CouponDisplay = function() {
+		    this.start = function() {
+		        $("#cart-totals").on('click', "#couponCodeToggle", function() {
+		            $("#couponCodeForm").slideToggle(500);
+		        });
+		    }
+		}
+		var couponDisplay = new CouponDisplay();
+        couponDisplay.start();
+        
         //===============
         //! Equalize row heights	 
         //===============
@@ -413,6 +423,7 @@
         
         var reviewManager = new ReviewManager();
         reviewManager.start();
+    
         
         //================
         //! Contact Form
