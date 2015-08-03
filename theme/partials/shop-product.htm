@@ -1,5 +1,7 @@
 {% set on_sale = product.onSale %}
 <div class="col-sm-6">
+	<h1 itemprop="name">{{ product.name }}</h1>
+
 	<div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 		<h2 itemprop="price">
 			{% if on_sale %}
@@ -20,7 +22,10 @@
 		{{ product.description|unescape }}
 	</div>
 	{% endif %}
-	{{ partial('shop-product-video') }}
+
+	<div class="shop-product-video">
+		{{ partial('shop-product-video') }}
+	</div>
 		
 	{{ partial('shop-product-attributes') }}
 			
@@ -34,11 +39,11 @@
 			<div class="add-cart-holder form-group">
 				{{ flash() }}
 				<div class="quantity-selector">
-					<button class="quantity-btn minus btn btn-lg btn-default"><i class="fa fa-minus"></i></button>
+					<button class="quantity-btn minus"><i class="fa fa-minus"></i></button>
 					<input class="form-control quantity" type="text" value="{{ quantity|default("1") }}" name="quantity"/>
-					<button class="quantity-btn plus btn btn-lg btn-default"><i class="fa fa-plus"></i></button>
+					<button class="quantity-btn plus"><i class="fa fa-plus"></i></button>
 				</div>
-				<a class="btn btn-lg btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #product-page=shop-product, #navbar-totals=shop-minicart-totals">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+				<a class="btn btn-prime" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #product-page=shop-product, #navbar-totals=shop-minicart-totals">Add to Cart <i class="fa fa-shopping-cart"></i></a>
 			</div>
 			
 		{% else %}

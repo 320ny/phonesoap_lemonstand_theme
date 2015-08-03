@@ -7,10 +7,8 @@ name: Category
 url: '/category/:urlName@/:page?'
 ---
 {% if not category %}
-	<div id="banner" class="jumbotron row">
-	<h1>Category not found</h1>
 	<p>We are sorry, the requested category was not found.</p>
-</div>
+
 <section class="page-section row">
     <div class="col-xs-12 col-sm-3">
 			<div class="sidebar">
@@ -32,9 +30,11 @@ url: '/category/:urlName@/:page?'
 		</div>
 </section>
 {% else %}
+<!--
 <div id="banner" class="jumbotron row">
 	<h1>{{ category.name }}</h1>
 	<p>{{ category.short_description }}</p>
 </div>
+-->
 {{ partial('shop', { 'product': product }) }}
 {% endif %}

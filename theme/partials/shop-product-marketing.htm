@@ -2,7 +2,7 @@
 description: 'Extra marketing copy '
 ---
 {% if product.marketing_copy %}
-    <section>
+    <section class="product-marketing">
         {{ product.marketing_copy |unescape}}
     </section>
 {% endif %}

@@ -95,6 +95,13 @@ img {
 .col-split-2:before {
   background: none;
 }
+.modal-header {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.modal-body {
+  padding-top: 10px;
+}
 /* 
 --------------------
 
@@ -843,7 +850,7 @@ FAQ - SECTION
 }
 .faq-section h1 {
   margin: 0 0 5%;
-  font-size: 3.5em;
+  font-size: 3.2em;
   font-weight: 300;
 }
 .faq-section h2 {
@@ -1028,6 +1035,104 @@ WARRANTY & PRIVACY POLICY
 /* 
 --------------------
 
+PRODUCTS
+
+--------------------
+*/
+.categories-group a:hover {
+  background: #02a4ef;
+}
+.categories-group a:hover .badge {
+  color: #02a4ef;
+}
+#single-product .breadcrumb {
+  position: static;
+}
+#single-product .hidden-xs {
+  display: inline-block !important;
+}
+#single-product {
+  margin-top: 40px;
+  padding: 1% 0;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+#single-product h1 {
+  margin: 0;
+  font-size: 2.8em;
+  font-weight: 600;
+}
+#single-product .price h2 {
+  font-weight: 400;
+}
+.shop-product-video {
+  margin: 3% 0;
+}
+.shop-product-video img {
+  max-width: 151px;
+}
+.gallery-thumbs.list-inline {
+  margin-left: 3px;
+}
+.add-cart-holder .quantity-selector .quantity-btn {
+  padding: 13px 10px 12px;
+}
+.add-cart-holder .btn-prime {
+  margin-left: 4%;
+}
+#product-page .excerpt {
+  padding-right: 2%;
+}
+#product-page .excerpt .bigger {
+  font-size: 1.3em;
+}
+#product-page .excerpt .bigger em {
+  color: #02a4ef;
+  font-weight: 600;
+}
+.product-marketing #phonesafe,
+.product-marketing #hereshow,
+.product-marketing #howeffective,
+.product-marketing #chargeany,
+.product-marketing #imawake,
+.product-marketing #instructions,
+.product-marketing #specifications,
+.product-marketing #checkoutpolish {
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.product-marketing img {
+  border-radius: 10px;
+}
+.product-marketing h2 {
+  margin-top: 0;
+  font-size: 3em;
+}
+.product-marketing h2 em {
+  font-weight: 600;
+  color: #02a4ef;
+}
+#phonesafe img {
+  width: 70%;
+}
+#phonesafe .smallCol {
+  display: inline-block;
+  width: 29%;
+  padding-top: 5%;
+  vertical-align: top;
+}
+#hereshow {}
+#howeffective {}
+#chargeany {}
+#imawake {}
+#instructions {}
+#specifications {}
+#checkoutpolish {}
+/* 
+--------------------
+
 CART / CHECKOUT
 
 --------------------
@@ -1068,6 +1173,13 @@ section#checkout {
 }
 #cart-content .btn-continue-shopping {
   margin-top: 8%;
+}
+#cart-content .col-xs-12.col-md-3 .btn {
+  padding-left: 0;
+  padding-right: 0;
+}
+#cart-content .col-xs-12.col-md-3 .list-group {
+  margin-bottom: 8%;
 }
 .seal-verification {
   position: relative;
