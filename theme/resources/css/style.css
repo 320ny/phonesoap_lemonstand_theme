@@ -1039,6 +1039,14 @@ PRODUCTS
 
 --------------------
 */
+section.reviews {
+  margin: 5% 0;
+  max-width: 600px;
+  clear: both;
+}
+.reviews button {
+  margin-bottom: 20px;
+}
 .categories-group a:hover {
   background: #02a4ef;
 }
@@ -1091,11 +1099,15 @@ PRODUCTS
   color: #02a4ef;
   font-weight: 600;
 }
+.product-marketing {
+  clear: both;
+}
 .product-marketing #phonesafe,
 .product-marketing #hereshow,
 .product-marketing #howeffective,
 .product-marketing #chargeany,
 .product-marketing #imawake,
+.product-marketing #clean-anything,
 .product-marketing #instructions,
 .product-marketing #specifications,
 .product-marketing #checkoutpolish {
@@ -1114,22 +1126,74 @@ PRODUCTS
   font-weight: 600;
   color: #02a4ef;
 }
-#phonesafe img {
-  width: 70%;
+#phonesafe,
+#howeffective,
+#specifications {
+  background: #f6f6f6;
 }
-#phonesafe .smallCol {
+#hereshow,
+#chargeany,
+#instructions,
+#checkoutpolish {
+  background: #fff;
+}
+#phonesafe img,
+#hereshow img,
+#howeffective img,
+#chargeany img,
+#imawake img,
+#instructions img,
+#specifications img,
+#checkoutpolish img {
+  width: 65%;
+  height: 65%;
+}
+#phonesafe .smallCol,
+#hereshow .smallCol,
+#howeffective .smallCol,
+#chargeany .smallCol,
+#imawake .smallCol,
+#instructions .smallCol,
+#specifications .smallCol,
+#checkoutpolish .smallCol {
   display: inline-block;
-  width: 29%;
+  width: 34%;
   padding-top: 5%;
+  padding-right: 3%;
   vertical-align: top;
 }
-#hereshow {}
-#howeffective {}
-#chargeany {}
-#imawake {}
-#instructions {}
-#specifications {}
-#checkoutpolish {}
+#specifications .smallCol {
+  width: 40%;
+}
+#specifications img {
+  width: 59%;
+  height: 59%;
+}
+.product-marketing #howeffective .smallCol,
+.product-marketing #imawake .smallCol,
+.product-marketing #specifications .smallCol {
+  padding-right: 0;
+}
+.product-marketing #howeffective .smallCol,
+.product-marketing #imawake .smallCol,
+.product-marketing #specifications .smallCol {
+  padding-left: 3%;
+}
+#instructions dd,
+#instructions dt {
+  display: inline;
+}
+#instructions dt {
+  margin-right: 5px;
+}  
+#instructions dl {
+  margin-bottom: 3%;
+  padding-right: 3%;
+}
+.product-marketing #specifications h4 {
+  margin: 15px 0 5px;
+  font-size: 1.1em;
+}
 /* 
 --------------------
 
