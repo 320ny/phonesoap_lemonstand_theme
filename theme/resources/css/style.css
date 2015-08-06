@@ -184,6 +184,9 @@ HEADER
 .navbar-default #navbar-totals.active {
   background: #02a4ef;
 }
+.no-radius {
+  border-radius: 0 !important;
+}
 /* 
 --------------------
 
@@ -1078,6 +1081,10 @@ PRODUCTS
   margin-top: 30px;
   margin-bottom: 19px;
 }
+#product-images .item.active img,
+.carousel-inner {
+  border-radius: 0;
+}
 .categories-group a:hover {
   background: #02a4ef;
 }
@@ -1107,6 +1114,7 @@ PRODUCTS
   color: #ff6000;
 }
 #single-product .price p {
+  padding-right: 3%;
   font-weight: 400;
 }
 .shop-product-video {
@@ -1137,15 +1145,7 @@ PRODUCTS
 .product-marketing {
   clear: both;
 }
-.product-marketing #phonesafe,
-.product-marketing #hereshow,
-.product-marketing #howeffective,
-.product-marketing #chargeany,
-.product-marketing #imawake,
-.product-marketing #clean-anything,
-.product-marketing #instructions,
-.product-marketing #specifications,
-.product-marketing #checkoutpolish {
+.product-marketing .section {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -1155,7 +1155,16 @@ PRODUCTS
   border-radius: 0 0 10px 10px;
 }
 .product-marketing img {
+  width: 65%;
+  height: 65%;
   border-radius: 10px;
+}
+.product-marketing .smallCol {
+  display: inline-block;
+  width: 34%;
+  padding-top: 5%;
+  padding-right: 3%;
+  vertical-align: top;
 }
 .product-marketing h2 {
   margin-top: 0;
@@ -1173,8 +1182,29 @@ PRODUCTS
 #hereshow,
 #chargeany,
 #instructions,
-#checkoutpolish {
+#checkoutpolish,
+#sanitizemultiple,
+#checkoutcharger {
   background: #fff;
+}
+/*
+.product-marketing #phonesafe,
+.product-marketing #hereshow,
+.product-marketing #howeffective,
+.product-marketing #chargeany,
+.product-marketing #imawake,
+.product-marketing #clean-anything,
+.product-marketing #instructions,
+.product-marketing #specifications,
+.product-marketing #checkoutpolish,
+.product-marketing #storemultiple,
+.product-marketing #sanitizemultiple,
+.product-marketing #chargemultiple,
+.product-marketing #tabletsoapcontact,
+.product-marketing #checkoutcharger {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 #phonesafe img,
 #hereshow img,
@@ -1201,6 +1231,7 @@ PRODUCTS
   padding-right: 3%;
   vertical-align: top;
 }
+*/
 #specifications .smallCol {
   width: 40%;
 }
@@ -1211,6 +1242,28 @@ PRODUCTS
   width: 59%;
   height: 59%;
 }
+#clean-anything img,
+#checkoutcharger .btn {
+  width: 100%;
+}
+#imawake img,
+#chargemultiple img {
+  position: relative;
+  right: -7px;
+}
+#tabletsoapcontact img {
+  width: 40%;
+  margin-top: 10.5%;
+  padding-bottom: 1px;
+}
+#tabletsoapcontact .smallCol {
+  width: 59%;
+  padding-left: 3%;
+}
+#tabletsoapcontact .page-section {
+  padding: 0;
+  margin-bottom: 3%;
+}
 .product-marketing #howeffective .smallCol,
 .product-marketing #imawake .smallCol,
 .product-marketing #specifications .smallCol {
@@ -1218,8 +1271,13 @@ PRODUCTS
 }
 .product-marketing #howeffective .smallCol,
 .product-marketing #imawake .smallCol,
-.product-marketing #specifications .smallCol {
+.product-marketing #specifications .smallCol,
+.product-marketing #chargemultiple .smallCol {
   padding-left: 3%;
+}
+.product-marketing #storemultiple .smallCol,
+.product-marketing #sanitizemultiple .smallCol {
+  padding-right: 8%;
 }
 #instructions dd,
 #instructions dt {
