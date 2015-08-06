@@ -30,11 +30,11 @@ url: '/category/:urlName@/:page?'
 		</div>
 </section>
 {% else %}
-<!--
+
 <div id="banner" class="jumbotron row">
 	<h1>{{ category.name }}</h1>
 	<p>{{ category.short_description }}</p>
 </div>
--->
+
 {{ partial('shop', { 'product': product }) }}
 {% endif %}

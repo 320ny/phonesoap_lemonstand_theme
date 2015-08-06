@@ -7,12 +7,27 @@ name: Product
 url: '/product/:urlName'
 ---
 <div itemscope itemtype="http://schema.org/Product">
-	<!--
+	
 	<div id="banner" class="jumbotron row">
 		<h1 itemprop="name">{{ product.name }}</h1>
 		<p itemprop="description">{{ product.short_description|unescape }}</p>
 	</div>
-	-->
+
+	<nav class="sub-nav">
+    <ul>
+      <li><a class="jsScrollTo" href="#single-product">Overview</a></li>
+      <li><a class="jsScrollTo" href="#phonesafe">Safe</a></li>
+      <li><a class="jsScrollTo" href="#hereshow">UV Light</a></li>
+      <li><a class="jsScrollTo" href="#howeffective">Effective</a></li>
+      <li><a class="jsScrollTo" href="#chargeany">Charger</a></li>
+      <li><a class="jsScrollTo" href="#imawake">Audio Output</a></li>
+      <li><a class="jsScrollTo" href="#clean-anything">Universal Cleaner</a></li>
+      <li><a class="jsScrollTo" href="#instructions">Instructions</a></li>
+      <li><a class="jsScrollTo" href="#specifications">Specs</a></li>
+      <li class="buy-now"><a href="#">BUY NOW</a></li>
+    </ul>
+  </nav>
+
 	<section id="single-product" class="page-section">
 		{{ code_block('breadcrumbs') }}
 
@@ -37,6 +52,5 @@ url: '/product/:urlName'
         
 	</section>
     
-    {{ partial('shop-product-reviews') }}
 	{{ partial('shop-product-marketing') }}
 </div>

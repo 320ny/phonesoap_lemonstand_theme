@@ -2,7 +2,7 @@
 
 <ol class="breadcrumb">
   <li class="hidden-xs"><a href="/">Home</a></li>
-  <li class="hidden-xs"><a href="/shop">Shop</a></li>
+  <li class="hidden-xs"><a href="/products?orderBy=sku">Shop</a></li>
   {% if category %}
     {% for parent in category.listAllParents() %}
       <li><a href="/category/{{ parent.fullUrlName }}">{{ parent.name }}</a></li>

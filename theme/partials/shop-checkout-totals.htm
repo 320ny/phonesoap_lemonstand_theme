@@ -1,3 +1,4 @@
+{{ open_form({'class': 'custom'}) }}
 <div id="cart-summary">
     {% if items.count %}
         <h3 class="cart-summary-title">Order Summary</h3>
@@ -23,10 +24,17 @@
             <p><a href='#' id="couponCodeToggle">Have a coupon code? Click here.</a></p>
             <div id='couponCodeForm' style="display:none;">
                 <input type="text" id="coupon-code" class="form-control" name="coupon" placeholder="Enter Coupon Code" value="{{ coupon_code }}">
+                <input type="hidden" id="billing-current-step" name="step" value="billing_info,shipping_info"/>
+                <input type="hidden" id="billing-next-step" name="nextStep" value="billing_info" />
+                <div class="clearfix">
+                    <a href="#" class="btn apply-discount" data-ajax-handler="shop:checkout" data-ajax-update="#cart-totals=shop-checkout-totals">Apply</a>
+                </div>
             </div>
         </div>
     {% endif %}
 
     <h3>Secure Checkout</h3>
     {{ partial("seal-verification") }}
+
 </div>
+{{ close_form() }}
