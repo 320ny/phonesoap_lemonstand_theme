@@ -1093,9 +1093,13 @@ PRODUCTS
     color: #999;
     font-size: 11px;
 }
-#product-page #addThis {
+#addThis {
+  float: right;
   margin-top: 30px;
-  margin-bottom: 19px;
+  margin-bottom: 31px;
+}
+#addThis h5 {
+  margin-top: 0;
 }
 #product-images .item.active img,
 .carousel-inner {
@@ -1117,7 +1121,7 @@ PRODUCTS
   margin-top: 80px;
   padding: 1% 0;
   background: #fff;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   border: 1px solid #ccc;
 }
 #single-product h1 {
@@ -1160,13 +1164,19 @@ PRODUCTS
 }
 .product-marketing {
   clear: both;
+  border-top: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
 }
 .product-marketing .section {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-.product-marketing #checkoutpolish {
+.product-marketing #checkoutpolish,
+.product-marketing #checkoutpatch,
+.product-marketing #checkoutcharger,
+.product-marketing #patch3,
+.product-marketing #iring7 {
   margin-bottom: 40px;
   border-radius: 0 0 10px 10px;
 }
@@ -1200,14 +1210,31 @@ PRODUCTS
 #instructions,
 #checkoutpolish,
 #sanitizemultiple,
-#checkoutcharger {
+#checkoutcharger,
+#smudge,
+#lasting,
+#polishspecs,
+#germresistant {
   background: #fff;
+}
+#phonesafe,
+#germguardsummary,
+#first,
+#storemultiple,
+#iring1 {
+  border-radius: 10px 10px 0 0;
 }
 #specifications .smallCol {
   width: 40%;
 }
 #checkoutpolish .smallCol {
   padding-top: 22%;
+}
+#polishspecs .smallCol {
+  padding-top: 15%;
+}
+#checkoutpatch .smallCol {
+  padding-top: 12%;
 }
 #specifications img {
   width: 59%;
@@ -1218,7 +1245,8 @@ PRODUCTS
   width: 100%;
 }
 #imawake img,
-#chargemultiple img {
+#chargemultiple img,
+#thinnest img {
   position: relative;
   right: -7px;
 }
@@ -1226,6 +1254,9 @@ PRODUCTS
   width: 40%;
   margin-top: 10.5%;
   padding-bottom: 1px;
+}
+.product-marketing #storemultiple img {
+  border-radius: 10px 0 0 0;
 }
 #tabletsoapcontact .smallCol {
   width: 59%;
@@ -1235,19 +1266,25 @@ PRODUCTS
   padding: 0;
   margin-bottom: 3%;
 }
-#checkoutcharger {
-  margin-bottom: 40px;
-  border-radius: 0 0 10px 10px;
-}
 .product-marketing #howeffective .smallCol,
 .product-marketing #imawake .smallCol,
-.product-marketing #specifications .smallCol {
+.product-marketing #specifications .smallCol,
+.product-marketing #first .smallCol,
+.product-marketing #natural .smallCol,
+.product-marketing #instructions-polish .smallCol,
+.product-marketing #checkoutpatch .smallCol,
+.product-marketing #thinnest .smallCol {
   padding-right: 0;
 }
 .product-marketing #howeffective .smallCol,
 .product-marketing #imawake .smallCol,
 .product-marketing #specifications .smallCol,
-.product-marketing #chargemultiple .smallCol {
+.product-marketing #chargemultiple .smallCol,
+.product-marketing #first .smallCol,
+.product-marketing #natural .smallCol,
+.product-marketing #instructions-polish .smallCol,
+.product-marketing #checkoutpatch .smallCol,
+.product-marketing #thinnest .smallCol {
   padding-left: 3%;
 }
 .product-marketing #storemultiple .smallCol,
@@ -1255,15 +1292,25 @@ PRODUCTS
   padding-right: 8%;
 }
 #instructions dd,
-#instructions dt {
+#instructions dt,
+#instructions-polish dd,
+#instructions-polish dt {
   display: inline;
 }
-#instructions dt {
+#instructions dt,
+#instructions-polish dt {
   margin-right: 5px;
 }  
-#instructions dl {
+#instructions dl,
+#instructions-polish dl {
   margin-bottom: 3%;
   padding-right: 3%;
+}
+#checkoutpatch .btn {
+  margin-top: 3%;
+}
+#checkoutcharger p {
+  margin-bottom: 3%;
 }
 .product-marketing #specifications h4 {
   margin: 15px 0 5px;
@@ -1344,6 +1391,16 @@ PRODUCTS
 }
 .product-item .buttons-holder .btn-quick-view:hover {
   background: #636363;
+}
+.wistia-thumb {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.wistia-thumb img {
+  border-radius: 0;
+  max-width: 250px;
+  height: 100%;
 }
 /* 
 --------------------
