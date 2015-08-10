@@ -26,7 +26,7 @@ url: '/product/:urlName'
       <li><a class="jsScrollTo" href="#clean-anything">Universal Cleaner</a></li>
       <li><a class="jsScrollTo" href="#instructions">Instructions</a></li>
       <li><a class="jsScrollTo" href="#specifications">Specs</a></li>
-      <li class="buy-now"><a href="#">BUY NOW</a></li>
+      <li class="buy-now"><a class="jsScrollTo" href="#single-product">BUY NOW</a></li>
     </ul>
   </nav>
 
@@ -45,6 +45,7 @@ url: '/product/:urlName'
 					<div id="product-page">
 						{{ partial('shop-product') }}
 					</div>
+					  
 				</div>
 			
 			{% else %}
@@ -53,6 +54,19 @@ url: '/product/:urlName'
 		{{ close_form() }}
         
 	</section>
+	<!-- AddThis Button BEGIN -->
+		<div id="addThis" class="addthis_toolbox addthis_default_style addthis_32x32_style">
+		<h5>share with your friends</h5>
+		<a class="addthis_button_facebook"></a>
+		<a class="addthis_button_twitter"></a>
+		<a class="addthis_button_pinterest_share"></a>
+		<a class="addthis_button_email"></a>
+		<a class="addthis_button_compact"></a>
+		<a class="addthis_counter addthis_bubble_style"></a>
+		</div>
+		<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fa994f813fedc4b"></script>
+	<!-- AddThis Button END -->
     
 	{{ partial('shop-product-marketing') }}
 </div>

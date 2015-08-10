@@ -1051,6 +1051,22 @@ WARRANTY & PRIVACY POLICY
 /* 
 --------------------
 
+RECEIPT
+
+--------------------
+*/ 
+#receipt {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.receipt-header {
+  margin: 0 20px 20px;
+}
+/* 
+--------------------
+
 PRODUCTS
 
 --------------------
@@ -1187,51 +1203,6 @@ PRODUCTS
 #checkoutcharger {
   background: #fff;
 }
-/*
-.product-marketing #phonesafe,
-.product-marketing #hereshow,
-.product-marketing #howeffective,
-.product-marketing #chargeany,
-.product-marketing #imawake,
-.product-marketing #clean-anything,
-.product-marketing #instructions,
-.product-marketing #specifications,
-.product-marketing #checkoutpolish,
-.product-marketing #storemultiple,
-.product-marketing #sanitizemultiple,
-.product-marketing #chargemultiple,
-.product-marketing #tabletsoapcontact,
-.product-marketing #checkoutcharger {
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-#phonesafe img,
-#hereshow img,
-#howeffective img,
-#chargeany img,
-#imawake img,
-#instructions img,
-#specifications img,
-#checkoutpolish img {
-  width: 65%;
-  height: 65%;
-}
-#phonesafe .smallCol,
-#hereshow .smallCol,
-#howeffective .smallCol,
-#chargeany .smallCol,
-#imawake .smallCol,
-#instructions .smallCol,
-#specifications .smallCol,
-#checkoutpolish .smallCol {
-  display: inline-block;
-  width: 34%;
-  padding-top: 5%;
-  padding-right: 3%;
-  vertical-align: top;
-}
-*/
 #specifications .smallCol {
   width: 40%;
 }
@@ -1263,6 +1234,10 @@ PRODUCTS
 #tabletsoapcontact .page-section {
   padding: 0;
   margin-bottom: 3%;
+}
+#checkoutcharger {
+  margin-bottom: 40px;
+  border-radius: 0 0 10px 10px;
 }
 .product-marketing #howeffective .smallCol,
 .product-marketing #imawake .smallCol,
@@ -1352,10 +1327,23 @@ PRODUCTS
   border: none;
 }
 .product-item .buttons-holder .btn-add-cart {
+  width: 139px;
+  padding-left: 0;
+  padding-right: 0;
   background: #ff6000;
 }
-.product-item .buttons-holder .btn-quick-view {
+.product-item .buttons-holder .btn-add-cart:hover {
   background: #02a4ef;
+}
+.product-item .buttons-holder .btn-quick-view {
+  min-width: initial;
+  padding-left: 0;
+  padding-right: 0;
+  width: 65px;
+  background: #02a4ef;
+}
+.product-item .buttons-holder .btn-quick-view:hover {
+  background: #636363;
 }
 /* 
 --------------------

@@ -77,7 +77,7 @@
 				$(this).zoom({url: href});
 			});	
 			
-			$('#sharrre .twitter').sharrre({
+			/*$('#sharrre .twitter').sharrre({
 	    		template: '<a href="#" rel="tooltip" title="Twitter: {total}"><i class="fa fa-twitter"></i></a>',
 	    		share: {
 	    			twitter: true
@@ -124,10 +124,10 @@
 	    			tipBottom();
 	    		}
 	    
-	    	});
+	    	});*/
 
 	        $("[data-target='#video-modal']").autoPlayYouTubeModal();
-	    	
+
 		}
 		singleProduct();
 		
@@ -171,7 +171,7 @@
 //===============
 		var cartFlag = new $.Deferred();
 		
-		$(document).on('click', '.btn-add-cart', function() {
+		$(document).on('click', '.add-to-cart', function() {
 			cartFlag.resolve();
 			
 			$(this).prepend('<i class="fa fa-refresh fa-spin"/>');
@@ -289,6 +289,12 @@
 			   tracker = true;
 		    }
 		});
+		
+		$(document).on('change', '#billing_state[data-mirror]', function() {
+		    if (sessionStorage.toggleMirror == 'on') {
+		        mirrorAll();
+		    }
+		});
 		//update shipping only once
 		$(window).on('onAfterAjaxUpdate', function(){
 			if (tracker == true) {
@@ -313,7 +319,7 @@
 	        $(this).sendRequest('shop:checkout', {
 	            update: {
 	                '#cart-totals': 'shop-checkout-totals',
-	                '#mini-cart': 'shop-'
+	                '#mini-cart': 'shop-minicart'
 	            }
 	        });
 	        $('#cart-totals .order-shipping .badge').html('<i class="fa fa-refresh fa-spin"/>');

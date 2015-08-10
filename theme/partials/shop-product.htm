@@ -28,7 +28,6 @@
 	{% endif %}
 
 	<div class="shop-product-video">
-		<h5>Product Video</h5>
 		{{ partial('shop-product-video') }}
 	</div>
 		
@@ -48,7 +47,7 @@
 					<input class="form-control quantity" type="text" value="{{ quantity|default("1") }}" name="quantity"/>
 					<button class="quantity-btn plus"><i class="fa fa-plus"></i></button>
 				</div>
-				<a class="btn btn-prime" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #product-page=shop-product, #navbar-totals=shop-minicart-totals">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+				<a class="btn btn-prime add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #product-page=shop-product, #navbar-totals=shop-minicart-totals">Add to Cart <i class="fa fa-shopping-cart"></i></a>
 			</div>
 			
 		{% else %}
@@ -63,19 +62,7 @@
 		<div>
 	{% endif %}
 
-  <!-- AddThis Button BEGIN -->
-		<div id="addThis" class="addthis_toolbox addthis_default_style addthis_32x32_style">
-		<h5>share with your friends</h5>
-		<a class="addthis_button_facebook"></a>
-		<a class="addthis_button_twitter"></a>
-		<a class="addthis_button_pinterest_share"></a>
-		<a class="addthis_button_email"></a>
-		<a class="addthis_button_compact"></a>
-		<a class="addthis_counter addthis_bubble_style"></a>
-		</div>
-		<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fa994f813fedc4b"></script>
-	<!-- AddThis Button END -->
+
 
 <!--
 	<div id="sharrre" class="social-buttons">

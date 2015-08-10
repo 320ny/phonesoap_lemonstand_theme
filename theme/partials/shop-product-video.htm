@@ -2,7 +2,7 @@
 description: 'Displays a product video in a modal'
 ---
 {% if product.youtube_video_url %}
-
+  <h5>Product Video</h5>
   {{ partial('video-modal', {'thumb_img': product.video_thumb|theme_resource,
                              'video_url': product.youtube_video_url}) }}
                              
