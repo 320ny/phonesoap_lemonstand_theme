@@ -32,8 +32,33 @@
             </div>
         </div>
     {% endif %}
-
-    <h3>Secure Checkout</h3>
+    
+    {% if (step == 'pay') or (step == 'shipping_method') %}
+        <h3 class="cart-summary-title">Bill to</h3>
+        <ul class="price-list list-group">
+            <li class="list-group-item">
+                <p>{{ billingInfo.firstName }} {{ billingInfo.lastName }}</p>
+                <p>
+                    {{ billingInfo.streetAddressLine1 }}<br>
+                    {{ billingInfo.city }}, {{ billingInfo.state.code }} {{ billingInfo.postalCode }}<br>
+                    {{ billingInfo.country.name }}
+                </p>
+            </li>
+        </ul>
+        <h3 class="cart-summary-title">Ship to</h3>
+        <ul class="price-list list-group">
+            <li class="list-group-item">
+                <p>{{ shippingInfo.firstName }} {{ shippingInfo.lastName }}</p>
+                <p>
+                    {{ shippingInfo.streetAddressLine1 }}<br>
+                    {{ shippingInfo.city }}, {{ shippingInfo.state.code }} {{ shippingInfo.postalCode }}<br>
+                    {{ shippingInfo.country.name }}
+                </p>
+            </li>
+        </ul>
+    {% endif %}
+    
+     <h3>Secure Checkout</h3>
     {{ partial("seal-verification") }}
 
 </div>

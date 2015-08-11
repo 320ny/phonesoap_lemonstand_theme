@@ -8,13 +8,15 @@ title: 'Your Reciept -- Thank you! | PhoneSoap'
 name: Receipt
 url: '/receipt/:paymenthash'
 ---
-
 <!--
 <div id="banner" class="jumbotron row">
 	<h1>Your Receipt</h1>
 	<p>Please keep this information for your records.</p>
 </div>
 -->
+{% set order = invoice.order %}
+{% set billing = order.billingAddress %}
+{% set shipping = invoice.shipments[0].shippingAddress %}
 
 <div class="simple-page-wrapper">
 
@@ -25,11 +27,37 @@ url: '/receipt/:paymenthash'
 		</div>
 
 	{% if invoice %}
-			<div class="col-md-12 col-lg-9">
-				<div id="cart-content">
-					{{ partial('shop-invoiceitems') }}
-				</div>
+	    <div class="col-md-12 col-lg-9">
+	        <div id="cart-content">
+	            <h3>Shipping & Tracking</h3>
+	            <p>
+	            We have received your order and are preparing your shipment now. 
+	            An email notification with your tracking information will be sent to {{order.customer.email}} when your product(s) have shipped.
+	            </p>
+	            <h4>Billing Address</h4>
+	            <div>
+	                <p>
+	                {{billing.firstName}} {{billing.lastName}}<br>
+	                {{billing.street_address}}<br>
+	                {{billing.city}}, {{billing.state.code}} {{billing.postal_code}}<br>
+	                {{billing.country.name}}</p>
+	            </div>
+	            <h4>Shipping Address</h4>
+	            <div>
+	                <p>
+	                {{shipping.firstName}} {{shipping.lastName}}<br>
+	                {{shipping.street_address}}<br>
+	                {{shipping.city}}, {{shipping.state.code}} {{shipping.postal_code}}<br>
+	                {{shipping.country.name}}</p>
+	            </div>
+	        </div>
+	    </div>
+		<div class="col-md-12 col-lg-9">
+			<h4>Order Summary</h4>
+			<div id="cart-content">
+				{{ partial('shop-invoiceitems') }}
 			</div>
+		</div>
 		{% if invoice.isPaid() %}
 			<div class="col-md-12 col-lg-3">
 				<table class="table table-bordered">

@@ -295,6 +295,11 @@
 		        mirrorAll();
 		    }
 		});
+		$(document).on('change', '#billing_country[data-mirror]', function() {
+		    if (sessionStorage.toggleMirror == 'on') {
+		        mirrorAll();
+		    }
+		});
 		//update shipping only once
 		$(window).on('onAfterAjaxUpdate', function(){
 			if (tracker == true) {

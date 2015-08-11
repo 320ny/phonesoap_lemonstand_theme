@@ -6,7 +6,34 @@
         <table class="table table-bordered" id="shipping-methods">
                  
           {% for index, option in shippingOptions %}
-            {% if (not option.shippingMethodApiCode == 'freeshipping') or (cart.getSubtotal > 70.0) %}
+            {% if (option.shippingMethodApiCode == 'freeshipping') or (option.shippingMethodApiCode == 'us-priority') %}
+                {% if ((option.shippingMethodApiCode == 'freeshipping') and (cart.getSubtotal > 70.0)) or ((option.shippingMethodApiCode == 'us-priority') and (cart.getSubtotal < 70.0)) %}
+                    <tr>
+                      <td>
+                          <!-- The shipping method radio button clicks are handled in the main.js -->
+                          <input class="custom-radio" name="shippingMethod" 
+                            {{ option.error_hint ? 'disabled' : null }} 
+                            value="{{ index }}" 
+                            {{ radio_state(shippingMethodInfo.id, option.id) }}
+                            type="radio" id="{{ 'option'~index }}" />
+                            
+                          <label for="{{ 'option'~index }}" class="choice-title h6">
+                            {{ option.shippingMethodName }}
+                            {% if option.shippingServiceName %}: {{ option.shippingServiceName }}{% endif %}
+                          </label>
+                          
+                          {% if option.error_hint %}
+                            <span class="choice-description error-hint">{{ option.error_hint }}</span>
+                          {% endif %}
+                      </td>
+                      <td class="narrow">
+                        <span class="h3">{% if not option.error_hint  %}
+                          {{ not option.quote == 0 ? option.quote|currency : 'Free' }}
+                        {% endif %}</span>
+                      </td>
+                    </tr>
+                {% endif %}
+            {% else %}
                 <tr>
                   <td>
                       <!-- The shipping method radio button clicks are handled in the main.js -->
@@ -39,15 +66,16 @@
       {% endif %}
 
 	{% if shippingOptions %}
-	<div class="clearfix">
-		<a class="btn btn-simple btn-checkout-step pull-left" href="#" 
-        data-ajax-handler="shop:checkout" 
-        data-ajax-update="#checkout-page=shop-checkout, #checkout-progress=shop-checkout-progress, #mini-cart=shop-minicart, #cart-totals=shop-checkout-totals"
-        data-ajax-extra-fields="nextStep=billing_info"><i class="fa fa-arrow-left"></i> Previous Step</a>
-		<a class="btn btn-prime btn-checkout-step pull-right" href="#" data-ajax-handler="shop:checkout" 
+	<div class="clearfix"></div>
+		
+	<a class="btn btn-prime btn-checkout-step pull-right" href="#" data-ajax-handler="shop:checkout" 
 		data-ajax-update="#checkout-page=shop-checkout, #checkout-progress=shop-checkout-progress, #mini-cart=shop-minicart, #cart-totals=shop-checkout-totals">Next Step <i class="fa fa-arrow-right"></i></a>
-	</div>
+	
 	{% endif %}
 	<input type="hidden" name="step" value="shipping_method,review"/>
 	<input type="hidden" name="nextStep" value="pay" />
 {{ close_form() }}
+<a class="btn btn-simple btn-checkout-step pull-left" href="#" 
+        data-ajax-handler="shop:checkout" 
+        data-ajax-update="#checkout-page=shop-checkout, #checkout-progress=shop-checkout-progress, #mini-cart=shop-minicart, #cart-totals=shop-checkout-totals"
+        data-ajax-extra-fields="nextStep=billing_info"><i class="fa fa-arrow-left"></i> Previous Step</a>

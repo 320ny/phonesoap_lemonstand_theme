@@ -15,20 +15,22 @@ url: '/product/:urlName'
 	</div>
 	-->
 
+    {% if product.id == 7 %}
 	<nav class="sub-nav">
-    <ul>
-      <li><a class="jsScrollTo" href="#single-product">Overview</a></li>
-      <li><a class="jsScrollTo" href="#phonesafe">Safe</a></li>
-      <li><a class="jsScrollTo" href="#hereshow">UV Light</a></li>
-      <li><a class="jsScrollTo" href="#howeffective">Effective</a></li>
-      <li><a class="jsScrollTo" href="#chargeany">Charger</a></li>
-      <li><a class="jsScrollTo" href="#imawake">Audio Output</a></li>
-      <li><a class="jsScrollTo" href="#clean-anything">Universal Cleaner</a></li>
-      <li><a class="jsScrollTo" href="#instructions">Instructions</a></li>
-      <li><a class="jsScrollTo" href="#specifications">Specs</a></li>
-      <li class="buy-now"><a class="jsScrollTo" href="#single-product">BUY NOW</a></li>
-    </ul>
-  </nav>
+        <ul>
+          <li><a class="jsScrollTo" href="#single-product">Overview</a></li>
+          <li><a class="jsScrollTo" href="#phonesafe">Safe</a></li>
+          <li><a class="jsScrollTo" href="#hereshow">UV Light</a></li>
+          <li><a class="jsScrollTo" href="#howeffective">Effective</a></li>
+          <li><a class="jsScrollTo" href="#chargeany">Charger</a></li>
+          <li><a class="jsScrollTo" href="#imawake">Audio Output</a></li>
+          <li><a class="jsScrollTo" href="#clean-anything">Universal Cleaner</a></li>
+          <li><a class="jsScrollTo" href="#instructions">Instructions</a></li>
+          <li><a class="jsScrollTo" href="#specifications">Specs</a></li>
+          <li class="buy-now"><a class="jsScrollTo" href="#single-product">BUY NOW</a></li>
+        </ul>
+    </nav>
+  {% endif %}
 
 	<section id="single-product" class="page-section">
 		{{ code_block('breadcrumbs') }}
