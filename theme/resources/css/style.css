@@ -1218,7 +1218,9 @@ PRODUCTS
 #smudge,
 #lasting,
 #polishspecs,
-#germresistant {
+#germresistant,
+#patch2,
+#cablespec {
   background: #fff;
 }
 #phonesafe,
@@ -1277,7 +1279,8 @@ PRODUCTS
 .product-marketing #natural .smallCol,
 .product-marketing #instructions-polish .smallCol,
 .product-marketing #checkoutpatch .smallCol,
-.product-marketing #thinnest .smallCol {
+.product-marketing #thinnest .smallCol,
+.product-marketing #patch2 .smallCol {
   padding-right: 0;
 }
 .product-marketing #howeffective .smallCol,
@@ -1288,7 +1291,9 @@ PRODUCTS
 .product-marketing #natural .smallCol,
 .product-marketing #instructions-polish .smallCol,
 .product-marketing #checkoutpatch .smallCol,
-.product-marketing #thinnest .smallCol {
+.product-marketing #thinnest .smallCol,
+.product-marketing #patch2 .smallCol
+ {
   padding-left: 3%;
 }
 .product-marketing #storemultiple .smallCol,
@@ -1298,15 +1303,19 @@ PRODUCTS
 #instructions dd,
 #instructions dt,
 #instructions-polish dd,
-#instructions-polish dt {
+#instructions-polish dt,
+#patch3 dd,
+#patch3 dt {
   display: inline;
 }
 #instructions dt,
-#instructions-polish dt {
+#instructions-polish dt,
+#patch3 dt {
   margin-right: 5px;
 }  
 #instructions dl,
-#instructions-polish dl {
+#instructions-polish dl,
+#patch3 dl {
   margin-bottom: 3%;
   padding-right: 3%;
 }
