@@ -1121,7 +1121,7 @@ PRODUCTS
   margin-top: 80px;
   padding: 1% 0;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   border: 1px solid #ccc;
 }
 #single-product h1 {
@@ -1168,8 +1168,6 @@ PRODUCTS
 }
 .product-marketing {
   clear: both;
-  border-top: 1px solid #ccc;
-  border-radius: 10px 10px 0 0;
 }
 .product-marketing .section {
   border-left: 1px solid #ccc;
@@ -1223,6 +1221,7 @@ PRODUCTS
 #cablespec {
   background: #fff;
 }
+/*
 #phonesafe,
 #germguardsummary,
 #first,
@@ -1230,6 +1229,7 @@ PRODUCTS
 #iring1 {
   border-radius: 10px 10px 0 0;
 }
+*/
 #specifications .smallCol {
   width: 40%;
 }
