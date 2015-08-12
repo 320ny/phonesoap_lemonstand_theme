@@ -1137,6 +1137,16 @@ PRODUCTS
   padding-right: 3%;
   font-weight: 400;
 }
+#shop {
+  margin-bottom: 40px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+}
+.container .jumbotron {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
 .shop-product-video {
   margin: 3% 0;
 }
@@ -1218,7 +1228,11 @@ PRODUCTS
 #polishspecs,
 #germresistant,
 #patch2,
-#cablespec {
+#cablespec,
+#iring2,
+#iring3,
+#iring4,
+#iring6 {
   background: #fff;
 }
 /*
@@ -1239,7 +1253,10 @@ PRODUCTS
 #polishspecs .smallCol {
   padding-top: 15%;
 }
-#checkoutpatch .smallCol {
+#checkoutpatch .smallCol,
+#iring1 .smallCol,
+#iring2 .smallCol,
+#iring3 .smallCol {
   padding-top: 12%;
 }
 #specifications img {
@@ -1280,7 +1297,8 @@ PRODUCTS
 .product-marketing #instructions-polish .smallCol,
 .product-marketing #checkoutpatch .smallCol,
 .product-marketing #thinnest .smallCol,
-.product-marketing #patch2 .smallCol {
+.product-marketing #patch2 .smallCol,
+.product-marketing #iring7 .smallCol {
   padding-right: 0;
 }
 .product-marketing #howeffective .smallCol,
@@ -1292,8 +1310,8 @@ PRODUCTS
 .product-marketing #instructions-polish .smallCol,
 .product-marketing #checkoutpatch .smallCol,
 .product-marketing #thinnest .smallCol,
-.product-marketing #patch2 .smallCol
- {
+.product-marketing #patch2 .smallCol,
+.product-marketing #iring7 .smallCol {
   padding-left: 3%;
 }
 .product-marketing #storemultiple .smallCol,
@@ -1328,6 +1346,12 @@ PRODUCTS
 .product-marketing #specifications h4 {
   margin: 15px 0 5px;
   font-size: 1.1em;
+}
+#iring1 {
+ background: url('https://s3.amazonaws.com/ls-account-data-4-us-east-1/store-phonesoap-55896e62dcaff/themes/boxie/resources/img/background-grey.jpg');
+}
+#iring1 img {
+  border-radius: 0;
 }
 .sub-nav {
   position: fixed;
