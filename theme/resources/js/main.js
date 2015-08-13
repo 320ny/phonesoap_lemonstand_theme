@@ -290,16 +290,13 @@
 		    }
 		});
 		
-		$(document).on('change', '#billing_state[data-mirror]', function() {
+		$(document).on('change', '[id^=billing]', function() {
+		    console.log("changed!!!!");
 		    if (sessionStorage.toggleMirror == 'on') {
 		        mirrorAll();
 		    }
 		});
-		$(document).on('change', '#billing_country[data-mirror]', function() {
-		    if (sessionStorage.toggleMirror == 'on') {
-		        mirrorAll();
-		    }
-		});
+	
 		//update shipping only once
 		$(window).on('onAfterAjaxUpdate', function(){
 			if (tracker == true) {

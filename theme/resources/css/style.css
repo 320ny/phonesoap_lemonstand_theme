@@ -1229,6 +1229,7 @@ PRODUCTS
 #germresistant,
 #patch2,
 #cablespec,
+#iring1,
 #iring2,
 #iring3,
 #iring4,
@@ -1250,14 +1251,18 @@ PRODUCTS
 #checkoutpolish .smallCol {
   padding-top: 22%;
 }
-#polishspecs .smallCol {
+#polishspecs .smallCol,
+#iring3 .smallCol {
   padding-top: 15%;
 }
 #checkoutpatch .smallCol,
 #iring1 .smallCol,
-#iring2 .smallCol,
-#iring3 .smallCol {
+#iring2 .smallCol {
   padding-top: 12%;
+}
+#iring5 .smallCol,
+#iring6 .smallCol {
+  padding-top: 10%;
 }
 #specifications img {
   width: 59%;
@@ -1269,7 +1274,8 @@ PRODUCTS
 }
 #imawake img,
 #chargemultiple img,
-#thinnest img {
+#thinnest img,
+#iring3 img {
   position: relative;
   right: -7px;
 }
@@ -1298,7 +1304,8 @@ PRODUCTS
 .product-marketing #checkoutpatch .smallCol,
 .product-marketing #thinnest .smallCol,
 .product-marketing #patch2 .smallCol,
-.product-marketing #iring7 .smallCol {
+.product-marketing #iring7 .smallCol,
+.product-marketing #iring3 .smallCol {
   padding-right: 0;
 }
 .product-marketing #howeffective .smallCol,
@@ -1311,7 +1318,8 @@ PRODUCTS
 .product-marketing #checkoutpatch .smallCol,
 .product-marketing #thinnest .smallCol,
 .product-marketing #patch2 .smallCol,
-.product-marketing #iring7 .smallCol {
+.product-marketing #iring7 .smallCol,
+.product-marketing #iring3 .smallCol {
   padding-left: 3%;
 }
 .product-marketing #storemultiple .smallCol,
@@ -1347,9 +1355,11 @@ PRODUCTS
   margin: 15px 0 5px;
   font-size: 1.1em;
 }
+/*
 #iring1 {
  background: url('https://s3.amazonaws.com/ls-account-data-4-us-east-1/store-phonesoap-55896e62dcaff/themes/boxie/resources/img/background-grey.jpg');
 }
+*/
 #iring1 img {
   border-radius: 0;
 }
