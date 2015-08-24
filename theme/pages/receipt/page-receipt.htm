@@ -6,7 +6,7 @@ protocol: all
 published: true
 title: 'Your Reciept -- Thank you! | PhoneSoap'
 name: Receipt
-url: '/receipt/:paymenthash'
+url: '/receipt/:paymenthash/'
 ---
 <!--
 <div id="banner" class="jumbotron row">
@@ -87,3 +87,96 @@ url: '/receipt/:paymenthash'
 	</section>
 
 </div><!-- end simple-page-wrapper -->
+
+<!-- Tracking Pixels -->
+  <!-- AdRoll -->
+<script type="text/javascript">
+adroll_conversion_value_in_dollars = {{ order.total }};
+adroll_custom_data = {"ORDER_ID": "{{ order.id }}", "PRODUCT_ID1": "{{ order.orderItems[0].name }}" }; 
+
+adroll_adv_id = "HNFOJCDA2VDIFEX3WROFZC";
+adroll_pix_id = "RYS6SEWIH5AKBLL6A4ZGUK";
+(function () {
+var oldonload = window.onload;
+window.onload = function(){
+   __adroll_loaded=true;
+   var scr = document.createElement("script");
+   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+   scr.setAttribute('async', 'true');
+   scr.type = "text/javascript";
+   scr.src = host + "/j/roundtrip.js";
+   ((document.getElementsByTagName('head') || [null])[0] ||
+    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+   if(oldonload){oldonload()}};
+}());
+</script>
+  
+ <!-- Google Code for Sale Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1030495293;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "L0LDCKPHowcQvbiw6wM";
+ if ({{ order.subtotal_invoiced }}) {
+  var google_conversion_value = {{ order.subtotal_invoiced }}
+  }
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1030495293/?value={{ order.subtotal_invoiced }}&amp;label=L0LDCKPHowcQvbiw6wM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Start Facebook Conversion -->
+<script type="text/javascript">
+var fb_param = {};
+fb_param.pixel_id = '6012738395494';
+fb_param.value = '{{ order.subtotal_invoiced }}';
+fb_param.currency = 'USD';
+(function(){
+  var fpw = document.createElement('script');
+  fpw.async = true;
+  fpw.src = '//connect.facebook.net/en_US/fp.js';
+  var ref = document.getElementsByTagName('script')[0];
+  ref.parentNode.insertBefore(fpw, ref);
+})();
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6012738395494&amp;value={{ order.subtotal_invoiced }}&amp;currency=USD" /></noscript>
+<!-- End Facebook Conversion -->
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1030495293;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1030495293/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Referral Candy -->
+<script type='text/javascript'>
+!function(d,s) {
+  var rc = d.location.protocol + "//go.referralcandy.com/purchase/tmhqn69o67kgghld72rnwijc7.js";
+  var js = d.createElement(s);
+  js.src = rc;
+  var fjs = d.getElementsByTagName(s)[0];
+  fjs.parentNode.insertBefore(js,fjs);
+}(document,"script");
+</script>
+<!-- END Tracking Pixels -->

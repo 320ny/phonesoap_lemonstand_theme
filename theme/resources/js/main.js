@@ -292,7 +292,7 @@
 		
 		$(document).on('change', '[id^=billing]', function() {
 		    console.log("changed!!!!");
-		    if (sessionStorage.toggleMirror == 'on') {
+		    if (!(sessionStorage.toggleMirror == 'off')) {
 		        mirrorAll();
 		    }
 		});

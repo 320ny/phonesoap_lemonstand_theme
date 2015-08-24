@@ -114,6 +114,15 @@ img {
 .container .jumbotron p {
   font-size: 1.2em;
 }
+a.apply-discount {
+  color: #fff;
+  font-size: 12px;
+  background: #02a4ef;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
+}
 /* 
 --------------------
 
@@ -1138,10 +1147,10 @@ PRODUCTS
   font-weight: 400;
 }
 #shop {
+  margin-top: 40px;
   margin-bottom: 40px;
   border: 1px solid #ccc;
-  border-top: none;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
 }
 .container .jumbotron {
   border-left: 1px solid #ccc;
@@ -1161,6 +1170,8 @@ PRODUCTS
 }
 .add-cart-holder .btn-prime {
   margin-left: 4%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 #product-page .excerpt {
   padding-right: 2%;
@@ -1449,6 +1460,18 @@ PRODUCTS
   max-width: 250px;
   height: 100%;
 }
+.announcement-banner {
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  background: #02a4ef;
+  border-radius: 0 0 10px 10px;
+}
+.announcement-banner strong {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 400;
+}
 /* 
 --------------------
 
@@ -1712,6 +1735,8 @@ FOOTER
 .fb_iframe_widget span,
 .fb_iframe_widget iframe {
   width: 100% !important;
+  word-wrap: break-word !important;
+  overflow: hidden !important;
 }
 /* 
 --------------------
@@ -1952,13 +1977,122 @@ MEDIA QUERIES
     max-width: 1070px;
  }
 }
+@media (max-width: 992px) {
+  .the-problem h3,
+  .the-problem p {
+    padding: 0 2%;
+  }
+  .problem-left img {
+    padding: 0;
+  }
+  #how-dirty .problem-left,
+  #how-dirty .problem-right,
+  #dirtier .problem-left,
+  #dirtier .problem-right,
+  #acne .acne-left,
+  #acne .acne-right,
+  #healthier .problem-left,
+  #healthier .problem-right,
+  #solution .phonesoap-left,
+  #solution .phonesoap-right {
+    width: 100%;
+    float: none;
+  }
+  .the-problem-nav li,
+  .sub-nav li {
+    display: none;
+  }
+  .the-problem-nav .buy-now,
+  .sub-nav .buy-now {
+    display: block;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    font-size: 1.2em;
+  }
+  .the-problem-nav .buy-now a,
+  .sub-nav .buy-now a {
+    display: block;
+    width: 100%;
+  }
+  .faq-section h1 {
+    font-size: 2em;
+  }
+  .container .jumbotron {
+    padding: 2% 2% 0;
+  }
+  .container .jumbotron h1 {
+    font-size: 2em;
+  }
+  #product-page .col-sm-6 {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .product-marketing img,
+  #specifications img {
+    width: 100%;
+    height: 100%;
+  }
+  .product-marketing .smallCol,
+  #specifications .smallCol {
+    display: block;
+    width: 100%;
+    padding: 5% 2% 2%;
+  }
+  .product-marketing h2 {
+    font-size: 2em;
+  }
+  #imawake img, #chargemultiple img, #thinnest img, #iring3 img {
+    right: 0;
+  }
+  #single-product .breadcrumb {
+    border-radius: 10px;
+  }
+  #cart-content .btn-continue-shopping {
+    margin-top: 3%;
+  }
+  .cart-security {
+    margin-top: 0;
+  }
+  .paypal-seal {
+    display: inline-block;
+    margin-top: 5px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+  }
+  section#checkout {
+    margin-top: 0;
+    padding: 10px 0;
+  }
+}
 
-a.apply-discount {
-        color: #fff;
-        font-size: 12px;
-        background: #02a4ef;
-        padding: 6px 12px;
-        border-radius: 6px;
-        display: inline-block;
-        margin-top: 10px;
-    }
+@media (max-width: 768px) {
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .login-wrapper .btn.pull-right,
+  .login-wrapper .btn.pull-left,
+  .btn-checkout-step {
+    float: none !important;
+    display: block;
+    margin-bottom: 2%;
+    width: 100%;
+    clear: both;
+  }
+  label.choice-title.h6 {
+    line-height: 1.6;
+  }
+  #checkout-progress .breadcrumb {
+    width: 99%;
+  }
+}
