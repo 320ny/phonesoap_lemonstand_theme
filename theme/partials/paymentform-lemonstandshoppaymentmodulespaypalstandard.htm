@@ -11,9 +11,14 @@ description: 'Payment form partial for PayPal Standard payment method'
     <button type="submit" class="btn btn-primary btn-lg btn-checkout-step pull-right">Pay with PayPal</button>
 </form>
 {% else %}
+
+    <h6>Select Submit and Pay Now to be re-directed to PayPal to pay.</h6>
+  
     <form method="post" action="" data-ajax-handler="shop:onPay">
         <input type="hidden" value="{{ paymentMethod.id }}" name="payment_method_id">
+
         <div class="row field-row">
+  
 		    <div class="col-xs-12 button-holder">
 	        	<a class="btn btn-simple btn-checkout-step pull-left" href="#" 
         data-ajax-handler="shop:checkout" 

@@ -104,8 +104,9 @@ img {
   padding-top: 10px;
 }
 .container .jumbotron {
-  padding: 1% 10% 0 27%;
+  padding: 1% 0 0 15px;
   text-align: left;
+  background: #fff;
 }
 .container .jumbotron h1 {
   font-size: 3em;
@@ -226,8 +227,8 @@ HOME
 .carousel-video {
   display: none;
   position: absolute;
-  left: 104px;
-  bottom: 150px;
+  left: 20px;
+  bottom: 20px;
 }
 .carousel-video img {
   width: 229px;
@@ -693,6 +694,10 @@ DEVICES - PAGES
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   border-top: 1px solid #ccc;
+}
+.single-device-wrap {
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 .device-section-wrapper-alt {
   background: #f6f6f6;
@@ -1580,6 +1585,12 @@ div.AuthorizeNetSeal {
   color: #636363;
   font-style: italic;
 }
+.shop-wrapper .announcement-banner {
+  border-radius: 10px 10px 0 0;
+}
+.shop-wrapper .free-shipping {
+  display: none;
+}
 /* 
 --------------------
 
@@ -1994,7 +2005,9 @@ MEDIA QUERIES
   #healthier .problem-left,
   #healthier .problem-right,
   #solution .phonesoap-left,
-  #solution .phonesoap-right {
+  #solution .phonesoap-right,
+  #tabletsoapcontact img,
+  #tabletsoapcontact .smallCol {
     width: 100%;
     float: none;
   }
@@ -2064,6 +2077,28 @@ MEDIA QUERIES
     margin-top: 0;
     padding: 10px 0;
   }
+  #home-banner .carousel-inner > .item .jumbotron {
+    position: static;
+  }
+  #home-banner .carousel-caption p {
+    margin-top: 0;
+  }
+  .jumbotron.carousel-caption.right,
+  .jumbotron.carousel-caption.left {
+    padding-top: 0;
+  }
+  .wistia-thumb {
+    text-align: center;
+  }
+  #checkoutpolish .smallCol {
+    padding-top: 0;
+  }
+  .faq .faq-wrapper,
+  .faq .faq-item-wrapper,
+  .devices .device-wrapper,
+  .devices .device-item-wrapper {
+    margin-bottom: 5%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2095,4 +2130,43 @@ MEDIA QUERIES
   #checkout-progress .breadcrumb {
     width: 99%;
   }
+  .navbar-header {
+    position: relative;
+  }
+  .navbar > .container .navbar-brand img {
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    margin-top: -14px;
+  }
+  .carousel-cta a {
+    border-radius: 14px 0 10px 0;
+  }
+  #solution .phonesoap-right img {
+    padding-top: 0;
+  }
+  #solution .btn-cta {
+    margin-bottom: 7%;
+  }
+  .container .jumbotron p {
+    display: none;
+  }
+  select.form-control {
+    font-size: 16px;
+  }
+  .faq-section-start .true-full-img img {
+    border-radius: 10px 10px 0 0;
+  }
+  section#cart {
+    margin-left: -13px;
+    margin-right: -13px;
+  }
+   section#cart .shop-wrapper .announcement-banner {
+     margin-top: 0;
+     border-radius: 0;
+   }
+   .simple-page-wrapper .simple-page-content {
+       padding: 1% 5% 2%;
+   }
 }
