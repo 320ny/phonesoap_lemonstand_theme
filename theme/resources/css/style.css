@@ -124,6 +124,19 @@ a.apply-discount {
   display: inline-block;
   margin-top: 10px;
 }
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 /* 
 --------------------
 
@@ -410,6 +423,10 @@ a.btn.btn-default.btn-quick-view.hidden-xs {
 .product-item .buttons-holder {
   display: block;
 }
+#home-banner .carousel-inner {
+  border-radius: 10px;
+}
+
 /* 
 --------------------
 
@@ -862,6 +879,9 @@ a.faq-contact {
   color: #02a4ef;
   text-decoration: none;
 }
+.faq-section-start.clean-anything {
+  border-radius: 10px;
+}
 /* 
 --------------------
 
@@ -1084,6 +1104,29 @@ RECEIPT
 }
 .receipt-header {
   margin: 0 20px 20px;
+}
+/* 
+--------------------
+
+PhoneSoap Videos
+
+--------------------
+*/
+.phonesoap-videos h1 {
+  padding-bottom: 3%;
+  margin-bottom: 2%;
+  border-bottom: 1px solid #ccc;
+}
+.phonesoap-videos strong {
+  display: block;
+  margin: 2% 0 1%;
+  font-size: 1.3em;
+}
+.phonesoap-videos .videoWrapper {
+  margin: 2% 0;
+}
+.phonesoap-videos .wistia_embed {
+  margin-bottom: 4%;
 }
 /* 
 --------------------
@@ -2115,20 +2158,7 @@ MEDIA QUERIES
   }
 }
 
-@media (max-width: 768px) {
-  .videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
-    height: 0;
-  }
-  .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+@media (max-width: 767px) {
   .login-wrapper .btn.pull-right,
   .login-wrapper .btn.pull-left,
   .btn-checkout-step {
@@ -2166,6 +2196,9 @@ MEDIA QUERIES
   .container .jumbotron p {
     display: none;
   }
+  #home-banner .jumbotron p {
+    display: block;
+  }
   select.form-control {
     font-size: 16px;
   }
@@ -2176,11 +2209,11 @@ MEDIA QUERIES
     margin-left: -13px;
     margin-right: -13px;
   }
-   section#cart .shop-wrapper .announcement-banner {
-     margin-top: 0;
-     border-radius: 0;
-   }
-   .simple-page-wrapper .simple-page-content {
-       padding: 1% 5% 2%;
-   }
+  section#cart .shop-wrapper .announcement-banner {
+    margin-top: 0;
+    border-radius: 0;
+  }
+  .simple-page-wrapper .simple-page-content {
+    padding: 1% 5% 2%;
+  }
 }
