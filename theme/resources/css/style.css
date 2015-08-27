@@ -191,6 +191,13 @@ HEADER
 .mini-cart-totals .btn.btn-prime {
   margin-bottom: 0;
 }
+.mini-cart-totals .announcement-banner {
+  margin-bottom: 10%;
+  border-radius: 0;
+}
+.mini-cart-totals .announcement-banner strong {
+  font-size: 1em;
+}
 .navbar-default #navbar-totals.active {
   background: #02a4ef;
 }
@@ -1855,7 +1862,14 @@ MEDIA QUERIES
     margin-right: 10px;
   }
   .navbar-default #search-form .search-btn {
-    padding: 6px 12px 8px;
+    padding: 6px 0 8px;
+  }
+  .navbar-default #search-form .search-btn i {
+    color: #868485;
+  }
+  .navbar-default #search-form.active .form-control {
+    width: 102%;
+    border: 1px solid #ccc;
   }
   .navbar-nav > li > a {
     padding-top: 25px;

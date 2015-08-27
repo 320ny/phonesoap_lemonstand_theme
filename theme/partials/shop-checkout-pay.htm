@@ -32,12 +32,12 @@
 				<div class="payment-method-wrapper">
 					<input class="custom-radio" name="paymentMethodId" value="{{ method.id }}" type="radio" id="payment-method{{ method.id }}" />
 					<label for="payment-method{{ method.id }}" class="choice-title h6">{{ method.name }}</label>
-
-					<!-- BENNICK make this img show next to the credit card label 
-					<img class="cc-img" src="{{ 'img/cards.jpg'|theme_resource }}" alt="" /> -->
-
-					<!-- BENNICK make this img show next to the paypal label
-					<img class="paypal-img" src="{{ 'img/paypal.jpg'|theme_resource }}" alt="" />-->
+                    
+                    {% if method.api_code == 'credit_card' %}
+                        <img class="cc-img" src="{{ 'img/cards.jpg'|theme_resource }}" alt="" />
+                    {% elseif method.api_code == 'paypal' %}
+                        <img class="paypal-img" src="{{ 'img/paypal.jpg'|theme_resource }}" alt="" />
+                    {% endif %}
 
 				</div><!-- payment-method-wrapper -->
 			{% endfor %}

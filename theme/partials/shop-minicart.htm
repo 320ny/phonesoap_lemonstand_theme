@@ -23,6 +23,11 @@
 		{% endfor %}
 	</ul>
     <div class="mini-cart-totals">
+      
+      <div class="announcement-banner">
+        <strong>Free Shipping On Orders Over $70</strong>
+      </div>
+
     	<h4 class="subtotal">Subtotal: {{ cart.getSubtotal()|currency }}</h4>
       <a class="btn btn-second" href="{{ site_url('/cart') }}">View Cart</a>
       <br>
