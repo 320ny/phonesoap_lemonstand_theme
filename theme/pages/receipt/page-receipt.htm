@@ -8,6 +8,36 @@ title: 'Your Reciept -- Thank you! | PhoneSoap'
 name: Receipt
 url: '/receipt/:paymenthash/'
 ---
+<!-- START Rakuten Marketing Tracking -->
+<script type="text/javascript" src="//js.rmtag.com/[TrackingKey].ct.js"></script>
+<script type="text/javascript">
+var rm_trans = { 
+	orderid : '{{ order.id }}', 
+	currency: '{{ currency }}', 
+	customerStatus: '', 
+	conversionType: 'Sale', 
+	customerID: '', 
+	discountCode: '', 
+	discountAmount: {{ totals.discountTotal|currency }}, 
+	taxAmount: {{ order.total_sales_tax|currency }}, 
+	lineitems : [] 
+	}; 
+	
+{% for item in order.orderItems %}
+rm_trans['lineitems'].push({
+	quantity : {{ line_item.item.quantity }}, 
+	unitPrice : {{item.pivot.price|currency }}, 
+	unitPriceLessTax: {{ item.pivot.price|currency  }}, 
+	SKU: '{{ item.sku }}', 
+	productName: '{{ item.name }}'
+});
+{% endfor %}
+
+/*Do not edit any information beneath this line*/
+if(!window.DataLayer){window.DataLayer={Sale:{Basket:rm_trans}}}else{DataLayer.Sale=DataLayer.Sale||{Basket:rm_trans};DataLayer.Sale.Basket=DataLayer.Sale.Basket||rm_trans}DataLayer.Sale.Basket.Ready = true;
+</script>
+<!-- END Rakuten Marketing Tracking -->
+
 <!--
 <div id="banner" class="jumbotron row">
 	<h1>Your Receipt</h1>
@@ -180,3 +210,6 @@ var google_remarketing_only = true;
 }(document,"script");
 </script>
 <!-- END Tracking Pixels -->
+
+<!-- ADDTHIS social sharing -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55cb84fec48c8121" async="async"></script>

@@ -25,6 +25,11 @@ url: /checkout/
 					
 					<div id="cart-totals" class="col-sm-12 col-md-3">
 						{{ partial('shop-checkout-totals', {'items': items}) }}
+						
+					</div>
+					<div class="seal-verifications col-sm-12 col-md-3">
+					    <h3 class="cart-summary-title">Secure Checkout</h3>
+                        {{ partial("seal-verification") }}
 					</div>
 					
 				</section>

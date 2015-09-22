@@ -1,7 +1,12 @@
+{% set allCollection = 'all-products'|collection %}
+
 <h4>Categories</h4> 
 {% set active_cat = category.id %}
 {% tree categories %}
 <ul class="list-unstyled {% if tree.topLevel %} categories-group {% else %} sub-category {% endif %}">
+    <li>
+        <a href="https://www.phonesoap.com/products?orderBy=sku"><span class="badge">{{ allCollection.products.count }}</span>{{ allCollection.name }}</a>
+    </li>
     {% for category in tree.items %}
         <li>
             <a href="/category/{{ category.fullUrlName }}?orderBy=sku" class="{{ category.id == active_cat ? 'active' : null }}"><span class="badge">{{ category.products.count }}</span>{{ category.name }}</a>

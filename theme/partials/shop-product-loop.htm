@@ -11,15 +11,19 @@
 <div class="product-grid">
 	<div id="" class="row">
 		{% for product in pagination.items %}
-	
+		    {% set _index = loop.index %}
 		    {% if product.id in ids %}
 		        {% for variant in product.productVariants %}
-		            <div class="col-xs-12 col-sm-6 col-md-4 product-holder">
-			            {{ partial('shop-grid-item', {'product': product, 'variant': variant}) }}
-		            </div>
+		            {% if variant.in_stock_amount > 0 %}
+    		            <div class="col-xs-12 col-sm-6 col-md-4 product-holder">
+    		               
+    			            {{ partial('shop-grid-item', {'product': product, 'variant': variant}) }}
+    		            </div>
+		            {% endif %}
 		        {% endfor %}
 		    {% else %}
 		        <div class="col-xs-12 col-sm-6 col-md-4 product-holder">
+		            
 			        {{ partial('shop-grid-item', {'product': product}) }}
 		        </div>
 		    {% endif %}

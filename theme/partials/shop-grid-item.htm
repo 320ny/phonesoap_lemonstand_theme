@@ -38,11 +38,11 @@
 		    {% for key, value in variant.getOptionsArray %}
 		        <input type="hidden" name="options[{{key}}]" value="{{value}}">
             {% endfor %}
-		    <a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart </a>
+		    <a class="btn btn-danger btn-add-cart add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart </a>
 		{% else %}
 		    {% if not product.options.count %}
 		        <input type="hidden" name="productId" value="{{ product.id }}"/>
-			    <a class="btn btn-danger btn-add-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
+			    <a class="btn btn-danger btn-add-cart add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
 		    {% endif %}
 		{% endif %}
 	</div>

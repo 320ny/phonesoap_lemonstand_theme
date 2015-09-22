@@ -23,8 +23,9 @@
     //===============
 
     $("#shop-dropdown").mouseenter(function() {
-        $(this).trigger('click');
+        $('#store-menu-trigger').trigger('click');
     });
+    
 //===============
 //! SEARCH		 
 //===============

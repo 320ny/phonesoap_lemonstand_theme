@@ -40,13 +40,14 @@
 				<ul id="main-nav" class="nav navbar-nav">
 					<li class="{{ active_page == 'how-dirty-are-cell-phones' ? 'active' : null }}"><a href="/how-dirty-are-cell-phones">THE PROBLEM</a></li>
 					<li class="{{ categories.count ? 'dropdown' : null }} {{ active_page == 'shop' ? 'active' : null }}">
-						<a class="dropdown-toggle store-nav" {{ categories.count ? 'data-toggle="dropdown"' : null }} id="shop-dropdown" href="{{ site_url('shop') }}">
+						<a class="dropdown-toggle store-nav" id="shop-dropdown" href="{{ site_url('products') }}?orderBy=sku">
 							STORE <!--{{ categories.count ? '<b class="caret">' : null }}</b>-->
 						</a>
+						<a id="store-menu-trigger" href="" data-toggle="dropdown" style="display:none"></a>
 						{% if categories.count %}
 						<ul class="dropdown-menu" role="menu" aria-labelledby="shop-dropdown">
 							<li role="presentation">
-								<a href="{{ site_url('products') }}?orderBy=sku">PhoneSoap Products</a>
+								<a href="{{ site_url('products') }}?orderBy=sku">All Products</a>
 							</li>
 							{% tree categories %}
 							{% for category in tree.items|extended_sort('name', false) %}
@@ -96,4 +97,8 @@
 		</div>
 		<!--/.navbar-collapse -->
 	</div>
+	
+	<!-- START Rakuten Marketing Tracking -->
+<script type="text/javascript" src="//js.rmtag.com/111639.ct.js"></script>
+<!-- END Rakuten Marketing Tracking -->
 </nav>

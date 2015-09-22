@@ -1,0 +1,15 @@
+<item> 
+    <g:id> 
+        <![CDATA[{{ product.id }}]]> 
+    </g:id> 
+    <title> 
+        <![CDATA[{{ product.name }}]]> 
+    </title> 
+    <g:google_product_category> 
+        {% for category in product.categories %} 
+            {% if category.api_code == "base" %} 
+                {{ category.name }} 
+            {% endif %} 
+        {% endfor %} 
+    </g:google_product_category> 
+</item>

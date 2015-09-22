@@ -1418,8 +1418,11 @@ PRODUCTS
   margin-bottom: 3%;
 }
 .product-marketing #specifications h4 {
-  margin: 15px 0 5px;
   font-size: 1.1em;
+}
+
+#checkout .seal-verifications {
+    float: right;
 }
 /*
 #iring1 {
@@ -1527,6 +1530,14 @@ PRODUCTS
   font-size: 1.2em;
   font-weight: 400;
 }
+.product-holder .product-title {
+  font-size: 1.4em;
+}
+.product-grid .product-holder .product-item {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /* 
 --------------------
 
@@ -1570,6 +1581,7 @@ section#checkout {
 }
 #cart-content .btn-continue-shopping {
   margin-top: 8%;
+  margin-bottom: 6%;
 }
 #cart-content .col-xs-12.col-md-3 .btn {
   padding-left: 0;
@@ -1814,7 +1826,7 @@ FOOTER
   background: #fff;
 }
 .error-404 h1 {
-  margin-bottom: 1%;
+  margin-bottom: 5%;
 }
 .error-404-text {
   padding: 5% 7%;
@@ -2244,4 +2256,12 @@ MEDIA QUERIES
   .simple-page-wrapper .simple-page-content {
     padding: 1% 5% 2%;
   }
+}
+
+/* Loading Indicator */
+#loading-indicator {
+    z-index: 1050;
+}
+#loading-indicator span {
+    background-color: #02a4ef;
 }

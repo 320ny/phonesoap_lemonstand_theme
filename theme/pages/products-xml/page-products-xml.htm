@@ -1,0 +1,22 @@
+---
+action: 'shop:products'
+template: xml
+protocol: all
+published: true
+name: 'Products XML'
+url: /products.xml
+---
+<?xml version="1.0" encoding="UTF-8"?> 
+    <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0"> 
+        <channel> 
+        <title>The title of your feed</title> 
+        <link>The link to your store home page</link> 
+        <description>The description of your store</description> 
+        </channel> 
+        {% for product in products %} 
+            {{ partial('shop-product-list-xml', { 
+              'product': product, 
+              'empty_text': 'There are no products in this category.' 
+            }) }} 
+        {% endfor %} 
+    </rss>
