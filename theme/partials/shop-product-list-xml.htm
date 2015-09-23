@@ -1,15 +1,35 @@
+{% set variant = variant|default(null) %}
+
+{% if variant %}
+    {% set url = "https:#{site_url('/')}product/#{product.url_name}?" %}
+    {% for key, value in variant.getOptionsArray %}
+        {% set url = url ~ "options[#{key}]=#{value}&" %}
+    {% endfor %}
+    {% set image = variant.images.first %}
+    {% set price = variant.base_price ? variant.base_price : product.price %}
+    {% set sku = variant.sku %}
+{% else %}
+  {% set url = "https:#{site_url('/')}product/#{product.url_name}" %}
+  {% set image = product.images.first %}
+  {% set price = product.price %}
+  {% set sku = product.sku %}
+{% endif %}
+
 <item> 
     <g:id> 
         <![CDATA[{{ product.id }}]]> 
     </g:id> 
     <title> 
         <![CDATA[{{ product.name }}]]> 
-    </title> 
+    </title>
+    <price>{{ price }}</price>
+    <link>{{ url }}</link>
+    <image>{{ image.thumbnail(400, 300) }}</image>
+    <description>{{ product.short_description }}</description>
+    <sku>{{ sku }}</sku>
     <g:google_product_category> 
         {% for category in product.categories %} 
-            {% if category.api_code == "base" %} 
-                {{ category.name }} 
-            {% endif %} 
+            {{ category.name }}{% if not loop.last %},{% endif %} 
         {% endfor %} 
     </g:google_product_category> 
 </item>

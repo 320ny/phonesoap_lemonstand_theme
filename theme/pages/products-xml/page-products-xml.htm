@@ -6,17 +6,31 @@ published: true
 name: 'Products XML'
 url: /products.xml
 ---
-<?xml version="1.0" encoding="UTF-8"?> 
-    <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0"> 
-        <channel> 
-        <title>The title of your feed</title> 
-        <link>The link to your store home page</link> 
-        <description>The description of your store</description> 
-        </channel> 
-        {% for product in products %} 
-            {{ partial('shop-product-list-xml', { 
-              'product': product, 
-              'empty_text': 'There are no products in this category.' 
-            }) }} 
-        {% endfor %} 
-    </rss>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0"> 
+    <channel> 
+        <title>PhoneSoap Products</title> 
+        <link>https://www.phonesoap.com</link> 
+        <description>Clean and Polish Devices with PhoneSoap</description> 
+    </channel> 
+    
+    {% set displayVariantsCollection = 'display-variants'|collection %}
+    {% set ids = [] %}
+    
+    {% for product in displayVariantsCollection.products %}
+        {% set ids = ids|merge([product.id]) %}
+    {% endfor %}
+
+
+    {% for product in products %}
+        {% if product.id in ids %}
+	        {% for variant in product.productVariants %}
+	            {% if variant.in_stock_amount > 0 %}
+		            {{ partial('shop-product-list-xml', {'product': product, 'variant': variant}) }} 
+	            {% endif %}
+	        {% endfor %}
+        {% else %}		  
+            {{ partial('shop-product-list-xml', {'product': product}) }}
+        {% endif %}
+    {% endfor %} 
+</rss>

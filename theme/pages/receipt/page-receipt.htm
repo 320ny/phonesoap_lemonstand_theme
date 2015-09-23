@@ -4,33 +4,36 @@ description: 'Thank you for your purchase. Please keep this receipt for your rec
 template: inner
 protocol: all
 published: true
-title: 'Your Reciept -- Thank you! | PhoneSoap'
+title: 'Sanitize your phone with PhoneSoap!'
 name: Receipt
 url: '/receipt/:paymenthash/'
 ---
+{% set order = invoice.order %}
+
 <!-- START Rakuten Marketing Tracking -->
-<script type="text/javascript" src="//js.rmtag.com/[TrackingKey].ct.js"></script>
 <script type="text/javascript">
 var rm_trans = { 
 	orderid : '{{ order.id }}', 
-	currency: '{{ currency }}', 
+	currency: 'USD}', 
 	customerStatus: '', 
 	conversionType: 'Sale', 
-	customerID: '', 
+	customerID: '{{ order.customer.id }}', 
 	discountCode: '', 
-	discountAmount: {{ totals.discountTotal|currency }}, 
-	taxAmount: {{ order.total_sales_tax|currency }}, 
+	discountAmount: {{ order.total_discount }}, 
+	taxAmount: {{ order.total_sales_tax }}, 
 	lineitems : [] 
 	}; 
 	
-{% for item in order.orderItems %}
-rm_trans['lineitems'].push({
-	quantity : {{ line_item.item.quantity }}, 
-	unitPrice : {{item.pivot.price|currency }}, 
-	unitPriceLessTax: {{ item.pivot.price|currency  }}, 
-	SKU: '{{ item.sku }}', 
-	productName: '{{ item.name }}'
-});
+{% for shipment in invoice.shipments %}
+    {% for item in shipment.shipmentItems %}
+        rm_trans['lineitems'].push({
+        	quantity : {{ item.quantity|round(0, 'floor') }}, 
+        	unitPrice : {{item.pivot.price }}, 
+        	unitPriceLessTax: {{ item.pivot.price  }}, 
+        	SKU: '{{ item.product.sku }}', 
+        	productName: '{{ item.name }}'
+        });
+    {% endfor %}
 {% endfor %}
 
 /*Do not edit any information beneath this line*/
@@ -44,7 +47,7 @@ if(!window.DataLayer){window.DataLayer={Sale:{Basket:rm_trans}}}else{DataLayer.S
 	<p>Please keep this information for your records.</p>
 </div>
 -->
-{% set order = invoice.order %}
+
 {% set billing = order.billingAddress %}
 {% set shipping = invoice.shipments[0].shippingAddress %}
 
