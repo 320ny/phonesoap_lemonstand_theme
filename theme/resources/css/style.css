@@ -492,7 +492,7 @@ THE PROBLEM
   border-radius: 10px;
 }
 .the-problem .first-row {
-  margin-top: 80px;
+  margin-top: 40px;
   border-radius: 10px 10px 0 0;
   border-top: 1px solid #ccc;
 }
@@ -1102,8 +1102,48 @@ RECEIPT
   border: 1px solid #ccc;
   border-radius: 10px;
 }
+#receipt h1 {
+  margin-top: 0;
+  font-size: 3em;
+}
 .receipt-header {
+  display: inline-block;
+  width: 55%;
   margin: 0 20px 20px;
+}
+.receipt-share {
+  width: 35%;
+  float: right;
+}
+.receipt-share strong {
+  display: inline-block;
+  margin-bottom: 5%;
+  color: #333;
+  font-size: 1.1em;
+}
+.ship-track {
+  display: inline-block;
+  width: 40%;
+  padding: 0 5% 0 0;
+  vertical-align: top;
+}
+.bill-address,
+.ship-address {
+  display: inline-block;
+  width: 30%;
+  padding: 0 5% 0 0;
+  vertical-align: top;
+}
+#cart-content-top {
+  margin-bottom: 7%;
+  padding: 2% 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#receipt .h3.quantity,
+#receipt .h4.total-price,
+#receipt .h6.quantity {
+  font-size: 1em;
 }
 /* 
 --------------------

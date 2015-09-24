@@ -55,38 +55,42 @@ if(!window.DataLayer){window.DataLayer={Sale:{Basket:rm_trans}}}else{DataLayer.S
 
 	<section id="receipt" class="page-section row">
 		<div class="receipt-header">
-			<h3>Your Receipt — Thank You For Your Order!</h3>
+			<h1>Your Receipt — <br>Thank You For Your Order!</h1>
 			<p>Your order has been placed. Please keep this information for your records.</p>
+    </div>
+    <div class="receipt-share">  
+      <strong>Share Your Purchase, Not Your Germs!</strong>
+      <div class="addthis_sharing_toolbox"></div>
 		</div>
 
 	{% if invoice %}
 	    <div class="col-md-12 col-lg-9">
-	        <div id="cart-content">
-	            <h3>Shipping & Tracking</h3>
+	        <div id="cart-content-top">
+            <div class="ship-track">
+	            <h4>Shipping & Tracking</h4>
 	            <p>
 	            We have received your order and are preparing your shipment now. 
 	            An email notification with your tracking information will be sent to {{order.customer.email}} when your product(s) have shipped.
 	            </p>
+            </div><div class="bill-address">
 	            <h4>Billing Address</h4>
-	            <div>
 	                <p>
 	                {{billing.firstName}} {{billing.lastName}}<br>
 	                {{billing.street_address}}<br>
 	                {{billing.city}}, {{billing.state.code}} {{billing.postal_code}}<br>
 	                {{billing.country.name}}</p>
-	            </div>
+            </div><div class="ship-address">
 	            <h4>Shipping Address</h4>
-	            <div>
-	                <p>
-	                {{shipping.firstName}} {{shipping.lastName}}<br>
-	                {{shipping.street_address}}<br>
-	                {{shipping.city}}, {{shipping.state.code}} {{shipping.postal_code}}<br>
-	                {{shipping.country.name}}</p>
-	            </div>
+              <p>
+              {{shipping.firstName}} {{shipping.lastName}}<br>
+              {{shipping.street_address}}<br>
+              {{shipping.city}}, {{shipping.state.code}} {{shipping.postal_code}}<br>
+              {{shipping.country.name}}</p>
+            </div>
 	        </div>
 	    </div>
 		<div class="col-md-12 col-lg-9">
-			<h4>Order Summary</h4>
+			<h1>Order Summary</h1>
 			<div id="cart-content">
 				{{ partial('shop-invoiceitems') }}
 			</div>
@@ -213,6 +217,3 @@ var google_remarketing_only = true;
 }(document,"script");
 </script>
 <!-- END Tracking Pixels -->
-
-<!-- ADDTHIS social sharing -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55cb84fec48c8121" async="async"></script>
