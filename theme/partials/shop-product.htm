@@ -1,4 +1,6 @@
 {% set on_sale = product.onSale %}
+{% set preorder = product.in_stock_amount < 1 and product.allow_preorder %}
+ 
 <div class="col-sm-6">
 	<h1 itemprop="name">{{ product.name }}</h1>
 
@@ -21,16 +23,6 @@
 		{% endif %}
 	</div>
 	
-	{% if product.description %}
-	<div class="excerpt" itemprop="description">
-		{{ product.description|unescape }}
-	</div>
-	{% endif %}
-
-	<div class="shop-product-video">
-		{{ partial('shop-product-video') }}
-	</div>
-		
 	{{ partial('shop-product-attributes') }}
 			
 	{% if product.enabled %}
@@ -47,7 +39,7 @@
 					<input class="form-control quantity" type="text" value="{{ quantity|default("1") }}" name="quantity"/>
 					<button class="quantity-btn plus"><i class="fa fa-plus"></i></button>
 				</div>
-				<a class="btn btn-prime add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #product-page=shop-product, #navbar-totals=shop-minicart-totals">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+				<a class="btn btn-prime add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #product-page=shop-product, #navbar-totals=shop-minicart-totals">Add To Cart <i class="fa fa-shopping-cart"></i></a>
 			</div>
 			
 		{% else %}
@@ -61,6 +53,18 @@
 		    <h5>This product is temporarily unavailable</h5>
 		<div>
 	{% endif %}
+	
+	
+	
+	{% if product.description %}
+	<div class="excerpt" itemprop="description">
+		{{ product.description|unescape }}
+	</div>
+	{% endif %}
+
+	<div class="shop-product-video">
+		{{ partial('shop-product-video') }}
+	</div>
 
 
 	<!--

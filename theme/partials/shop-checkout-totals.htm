@@ -22,7 +22,7 @@
     {% if step == 'billing_info' %}
         <div>
             <p><a href='#' id="couponCodeToggle">Have a coupon code? Click here.</a></p>
-            <div id='couponCodeForm' style="display:none;">
+            <div id='couponCodeForm' {% if not theme.openDiscountBox %}style="display:none"{% endif %}>
                 <input type="text" id="coupon-code" class="form-control" name="coupon" placeholder="Enter Coupon Code" value="{{ coupon_code }}">
                 <input type="hidden" id="billing-current-step" name="step" value="billing_info,shipping_info"/>
                 <input type="hidden" id="billing-next-step" name="nextStep" value="billing_info" />

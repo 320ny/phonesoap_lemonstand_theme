@@ -15,4 +15,5 @@ customFields:
     socialFacebookUrl: { type: text, title: 'Global: Facebook URL', default: 'https://www.facebook.com/PhoneSoap' }
     socialTwitterUrl: { type: text, title: 'Global: Twitter URL', default: 'https://twitter.com/phonesoap' }
     socialGoogleUrl: { type: text, title: 'Global: Google+ URL', default: 'https://plus.google.com/+Phonesoap/posts' }
+    openDiscountBox: { type: checkbox, title: 'Open Discount Box?', default: 'false' }
 ---

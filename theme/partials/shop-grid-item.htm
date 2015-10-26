@@ -7,10 +7,11 @@
     {% for key, value in variant.getOptionsArray %}
         {% set url = url ~ "options[#{key}]=#{value}&" %}
     {% endfor %}
-
+    {% set preorder = variant.in_stock_amount < 1 and product.allow_preorder %}
     {% set image = variant.images.first %}
 {% else %}
   {% set url = "/product/#{product.url_name}" %}
+  {% set preorder = product.in_stock_amount < 0 and product.allow_preorder %}
   {% set image = product.images.first %}
 {% endif %}
 
@@ -24,11 +25,17 @@
 	</h3>
 	<div class="h4 product-price">
 		{% if on_sale %}
-		<span class="previous-price">{{ product.fullPrice|currency }}</span>
-		<div class="sale-tag">
-			Sale!
-		</div>
+    		<span class="previous-price">{{ product.fullPrice|currency }}</span>
+    		<div class="sale-tag">
+    			Sale!
+    		</div>
 		{% endif %}
+		{% if preorder %}
+		    <div class="preorder-tag">
+		        Pre-Order
+		    </div>
+		{% endif %}
+		
 		<span>{{ product.price|currency }}</span>
 	</div>
 	<div class="buttons-holder">
@@ -38,11 +45,11 @@
 		    {% for key, value in variant.getOptionsArray %}
 		        <input type="hidden" name="options[{{key}}]" value="{{value}}">
             {% endfor %}
-		    <a class="btn btn-danger btn-add-cart add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart </a>
+		    <a class="btn btn-danger btn-add-cart add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add To Cart </a>
 		{% else %}
 		    {% if not product.options.count %}
 		        <input type="hidden" name="productId" value="{{ product.id }}"/>
-			    <a class="btn btn-danger btn-add-cart add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add to Cart</a>
+			    <a class="btn btn-danger btn-add-cart add-to-cart" href="#" data-ajax-handler="shop:onAddToCart" data-ajax-update="#mini-cart=shop-minicart, #navbar-totals=shop-minicart-totals, #product-page=shop-product">Add To Cart </a>
 		    {% endif %}
 		{% endif %}
 	</div>

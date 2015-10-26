@@ -14,7 +14,7 @@
 		    {% set _index = loop.index %}
 		    {% if product.id in ids %}
 		        {% for variant in product.productVariants %}
-		            {% if variant.in_stock_amount > 0 %}
+		            {% if variant.in_stock_amount > 0 or product.allow_preorder %}
     		            <div class="col-xs-12 col-sm-6 col-md-4 product-holder">
     		               
     			            {{ partial('shop-grid-item', {'product': product, 'variant': variant}) }}

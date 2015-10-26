@@ -13,8 +13,8 @@ url: '/receipt/:paymenthash/'
 <!-- START Rakuten Marketing Tracking -->
 <script type="text/javascript">
 var rm_trans = { 
-	orderid : '{{ order.id }}', 
-	currency: 'USD}', 
+	orderid : '{{ order.number }}', 
+	currency: 'USD', 
 	customerStatus: '', 
 	conversionType: 'Sale', 
 	customerID: '{{ order.customer.id }}', 

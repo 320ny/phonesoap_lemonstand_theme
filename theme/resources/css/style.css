@@ -1247,6 +1247,17 @@ PRODUCTS
   border: 1px solid #ccc;
   border-radius: 10px;
 }
+.preorder-tag {
+    position: absolute;
+    top: -15px;
+    text-align: center;
+    width: 85px;
+    background: #e34f30;
+    height: 38px;
+    padding: 12px 6px;
+    font-size: 12px;
+    color: #ffffff;
+}
 .container .jumbotron {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;

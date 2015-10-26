@@ -1,6 +1,7 @@
 {% set variant = variant|default(null) %}
 
 {% if variant %}
+    {% set id = "Variant_#{variant.id}" %}
     {% set url = "https:#{site_url('/')}product/#{product.url_name}?" %}
     {% for key, value in variant.getOptionsArray %}
         {% set url = url ~ "options[#{key}]=#{value}&" %}
@@ -9,27 +10,42 @@
     {% set price = variant.base_price ? variant.base_price : product.price %}
     {% set sku = variant.sku %}
 {% else %}
+  {% set id = "Product_#{product.id}" %}
   {% set url = "https:#{site_url('/')}product/#{product.url_name}" %}
   {% set image = product.images.first %}
   {% set price = product.price %}
   {% set sku = product.sku %}
 {% endif %}
 
+{% set item = variant ? variant : product %}
+{% if item.in_stock_amount < 1 and product.allow_preorder %}
+    {% set availability = 'preorder' %}
+{% elseif item.in_stock_amount > 0 %}
+    {% set availability = 'in stock' %}
+{% else %}
+    {% set availability = 'out of stock' %}
+{% endif %}
+    
 <item> 
-    <g:id> 
-        <![CDATA[{{ product.id }}]]> 
-    </g:id> 
-    <title> 
-        <![CDATA[{{ product.name }}]]> 
-    </title>
-    <price>{{ price }}</price>
-    <link>{{ url }}</link>
-    <image>{{ image.thumbnail(400, 300) }}</image>
-    <description>{{ product.short_description }}</description>
-    <sku>{{ sku }}</sku>
-    <g:google_product_category> 
-        {% for category in product.categories %} 
-            {{ category.name }}{% if not loop.last %},{% endif %} 
-        {% endfor %} 
-    </g:google_product_category> 
+    <g:id>{{ id }}</g:id> 
+    <g:title>{{ product.name }}></g:title>
+    <g:description><![CDATA[{{ product.gmc_description }}]]></g:description>
+    <g:link>{{ url }}</g:link>
+    <g:image_link>{{ image.thumbnail(400, 300) }}</g:image_link>
+    <g:google_product_category>{{ product.gmc_category }}</g:google_product_category> 
+    <g:price>{{ price }} USD</g:price>
+    <g:condition>new</g:condition>
+    <g:availability>{{ availability }}</g:availability>
+    {% if variant %}
+        {% for opts in variant.product_options %}
+            {% if opts.name == 'Color' %}
+              {% set val = opts.pivot.value %}
+              {% for key, value in opts.values %}
+                {% if key == val %}
+                   <g:color>{{ value }}</g:color>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 </item>

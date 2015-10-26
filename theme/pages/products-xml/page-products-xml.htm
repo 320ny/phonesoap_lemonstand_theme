@@ -25,9 +25,7 @@ url: /products.xml
     {% for product in products %}
         {% if product.id in ids %}
 	        {% for variant in product.productVariants %}
-	            {% if variant.in_stock_amount > 0 %}
-		            {{ partial('shop-product-list-xml', {'product': product, 'variant': variant}) }} 
-	            {% endif %}
+		        {{ partial('shop-product-list-xml', {'product': product, 'variant': variant}) }} 
 	        {% endfor %}
         {% else %}		  
             {{ partial('shop-product-list-xml', {'product': product}) }}
